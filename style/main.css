@@ -140,3 +140,21 @@ html {
     background-color: #3871c2;
     border-color: #3871c2;
 }
+
+.logo-small {
+    width: 15vh;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: white; /* Secondary color */
+    border-color: white; /* Secondary color */
+    color: #3871c2; /* Primary color */
+}
+
+.btn-primary:hover {
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+    color: #0056b3;
+}

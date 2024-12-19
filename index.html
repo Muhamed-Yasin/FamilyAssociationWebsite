@@ -8,23 +8,58 @@
     <link rel="stylesheet" type="text/css" href="style/normalize.css">
     <link rel="stylesheet" type="text/css" href="style/main.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="icon" href="images/logo.jpg" type="image/jpeg">
+    <link rel="icon" href="images/logo.jpg" type="image/jpeg">
+    <style>
+        .navbar-nav {
+            margin: 0 auto;
+        }
+        .navbar-brand .logo {
+            height: 40px;
+        }
+        .navbar-brand .brand-text {
+            color: #3871c2;
+            font-size: x-large;
+            text-decoration: none;
+        }
+        .nav-link{
+            color: #3871c2;
+        }
+        .logo-medium {
+            width: 45vh;
+            height: auto;
+        }
+        .footer {
+            background-color: #3871c2;
+            color: white;
+            padding: 20px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for a sleek look */
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-<body style="background-color: #3871c2;">
-    <nav class="navbar navbar-expand-lg navbar-custom" style="background-color: white;">
-        <a class="navbar-brand" href="index.html">
-            <img src="images/logo.jpg" alt="Logo" class="logo" style="height: 40px;justify-self: center;"> 
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="images/logo.jpg" alt="Logo" class="logo">
+            <span class="brand-text ml-2">Manath Peechampilly Family Unit</span>
         </a>
-        <div class="mx-auto" style="color: #3871c2; height: 40px; justify-self: center; font-size:x-large;">
-            <a href="index.html" style="text-decoration: none;"> Manath Peechampilly Family Unit</a>
-        </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto d-flex align-items-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="about.html">About</a>
@@ -32,43 +67,42 @@
                 <li class="nav-item">
                     <a class="nav-link" href="family_tree.html">Family Tree</a>
                 </li>
-                <li class="nav-item">
-                    <button id="language-switcher" class="btn btn-outline-light btn-sm ml-2">English</button>
-                </li>
             </ul>
+            <button id="languageSwitcher" class="btn btn-secondary my-2 my-sm-0">Malayalam</button>
         </div>
     </nav>
-    <div id="content" class="container text-center" style=" margin-top: 0px; justify-content: center; align-items: center; display: flex; flex-direction: column; background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 18.5px );
-    -webkit-backdrop-filter: blur( 18.5px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );">
-        <img src="images/logo.jpg" alt="Logo" class="logo mb-4" style="height: 200px;">
-        <h1 id="welcome-message">മാനാത്ത് പീച്ചംപിള്ളി കുടുംബ യൂണിറ്റിലേക്ക് സ്വാഗതം</h1>
-        <p id="description" style="font-size: large;">ഇത് മാനാത്ത് പീച്ചംപിള്ളി കുടുംബ യൂണിറ്റ് ഹോം പേജാണ്. ഇവിടെ നിങ്ങൾക്ക് നമ്മുടെ കുടുംബ ചരിത്രം, ഇവന്റുകൾ, മറ്റ് വിവരങ്ങൾ എന്നിവ കണ്ടെത്താം.കുടുംബ അംഗങ്ങൾക്ക് പരസ്പരം അറിയുന്നതും ബന്ധങ്ങൾ മനസ്സിലാക്കുന്നതും ഒരു രേഖ ആയി  സൂക്ഷിക്കാനും വേണ്ടി ഒരു ഫാമിലി ട്രീ ഉണ്ടാക്കാനുള്ള ശ്രമം നടന്നു കൊണ്ടിരിക്കുക ആണ് . ഇതുവരെ ക്രോഡീകരിച്ച വിവരങ്ങൾ ഉൾപ്പെടുന്ന ഒരു ഇന്ററാക്റ്റീവ് ഫാമിലി ട്രീ താഴെ നൽകിയ ബട്ടൺ ക്ലിക്ക് ചെയ്താൽ ലഭ്യമാണ്.
-        </p>
-        <a href="family_tree.html" class="btn btn-primary" id="view-family-tree">Family Tree കാണുക</a>
+
+    <div class="container text-center">
+        <img src="images/logo.jpg" class="img-fluid mb-4 logo-medium" alt="Family Unit Logo">
+        <h1 id="welcomeMessage" class="smaller-display">Welcome to the Manath Peechampilly Family Unit</h1>
+        <p id="description" class="lead">This is the home page of the Manath Peechampilly Family Unit. Here you can find our family history, events, and other information. We are working on creating a family tree to help family members get to know each other and understand relationships. An interactive family tree with the information compiled so far is available by clicking the button below.</p>
+        <a href="family_tree.html"><button id="viewFamilyTree" class="btn btn-primary">View Family Tree</button></a>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <div class="footer">
+        <div class="container text-center">
+            <p>
+                &copy; 2024 Manath Peechampilly Family Unit. Developed by <a href="https://muhamed-yasin.github.io/" target="_blank" rel="noopener noreferrer">Muhamed Yasin</a>
+            </p>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        document.getElementById('language-switcher').addEventListener('click', function() {
-            const welcomeMessage = document.getElementById('welcome-message');
-            const description = document.getElementById('description');
-            const viewFamilyTree = document.getElementById('view-family-tree');
-            const languageSwitcher = document.getElementById('language-switcher');
-
-            if (languageSwitcher.textContent.includes('English')) {
+        document.getElementById('languageSwitcher').addEventListener('click', function() {
+            var welcomeMessage = document.getElementById('welcomeMessage');
+            var description = document.getElementById('description');
+            var viewFamilyTree = document.getElementById('viewFamilyTree');
+            var languageSwitcher = document.getElementById('languageSwitcher');
+            if (languageSwitcher.textContent === 'English') {
                 welcomeMessage.textContent = 'Welcome to the Manath Peechampilly Family Unit';
-                description.textContent = 'This is the home page of the Manath Peachampilly Family Unit. Here you can find our family history, events, and other information. An effort is underway to create a family tree so that family members can know each other, understand their relationships, and keep a record. An interactive family tree that includes the information compiled so far is available by clicking the button below.';
+                description.textContent = 'This is the home page of the Manath Peechampilly Family Unit. Here you can find our family history, events, and other information. We are working on creating a family tree to help family members get to know each other and understand relationships. An interactive family tree with the information compiled so far is available by clicking the button below.';
                 viewFamilyTree.textContent = 'View Family Tree';
                 languageSwitcher.textContent = 'Malayalam';
             } else {
-                welcomeMessage.textContent = 'മാനാത്ത് കുടുംബ അസോസിയേഷനിലേക്ക് സ്വാഗതം';
+                welcomeMessage.textContent = 'മാനാത്ത് പീച്ചംപിള്ളി കുടുംബ യൂണിറ്റിലേക്ക് സ്വാഗതം';
                 description.textContent = 'ഇത് മാനാത്ത് പീച്ചംപിള്ളി കുടുംബ യൂണിറ്റ് ഹോം പേജാണ്. ഇവിടെ നിങ്ങൾക്ക് നമ്മുടെ കുടുംബ ചരിത്രം, ഇവന്റുകൾ, മറ്റ് വിവരങ്ങൾ എന്നിവ കണ്ടെത്താം.കുടുംബ അംഗങ്ങൾക്ക് പരസ്പരം അറിയുന്നതും ബന്ധങ്ങൾ മനസ്സിലാക്കുന്നതും ഒരു രേഖ ആയി  സൂക്ഷിക്കാനും വേണ്ടി ഒരു ഫാമിലി ട്രീ ഉണ്ടാക്കാനുള്ള ശ്രമം നടന്നു കൊണ്ടിരിക്കുക ആണ് . ഇതുവരെ ക്രോഡീകരിച്ച വിവരങ്ങൾ ഉൾപ്പെടുന്ന ഒരു ഇൻററാക്റ്റീവ് ഫാമിലി ട്രീ താഴെ നൽകിയ ബട്ടൺ ക്ലിക്ക് ചെയ്താൽ ലഭ്യമാണ്.';
-                viewFamilyTree.textContent = 'Family Tree കാണുക';
+                viewFamilyTree.textContent = 'ഫാമിലി ട്രീ കാണുക';
                 languageSwitcher.textContent = 'English';
             }
         });

@@ -8,23 +8,37 @@
     <link rel="stylesheet" type="text/css" href="style/normalize.css">
     <link rel="stylesheet" type="text/css" href="style/main.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="icon" href="images/logo.jpg" type="image/jpeg">
+    <link rel="icon" href="images/logo.jpg" type="image/jpeg">
+    <style>
+        .navbar-nav {
+            margin: 0 auto;
+        }
+        .navbar-brand .logo {
+            height: 40px;
+        }
+        .navbar-brand .brand-text {
+            color: #3871c2;
+            font-size: x-large;
+            text-decoration: none;
+        }
+        .nav-link{
+            color: #3871c2;
+        }
+    </style>
 </head>
-<body >
-    <nav class="navbar navbar-expand-lg navbar-custom">
-        <a class="navbar-brand" href="index.html">
-            <img src="images/logo.jpg" alt="Logo" class="logo" style="height: 40px;justify-self: center;"> 
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="images/logo.jpg" alt="Logo" class="logo">
+            <span class="brand-text ml-2">Manath Peechampilly Family Unit</span>
         </a>
-        <div class="mx-auto" style="color: #3871c2; height: 40px; justify-self: center; font-size:x-large;" href="index.html">
-            <a href="index.html" style="text-decoration: none;"> Manath Peechampilly Family Unit</a>
-        </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto d-flex align-items-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="about.html">About</a>
@@ -32,10 +46,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="family_tree.html">Family Tree</a>
                 </li>
-                <li class="nav-item">
-                    <button id="language-switcher" class="btn btn-outline-light btn-sm ml-2" onclick="window.location.reload();">Close Tree</button>
-                </li>
             </ul>
+            <button id="languageSwitcher" class="btn btn-secondary my-2 my-sm-0" onclick="window.location.reload();">Close Tree</button>
         </div>
     </nav>
     <div id="content">
