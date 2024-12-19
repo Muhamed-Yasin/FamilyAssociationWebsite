@@ -60,7 +60,7 @@ This project is a website for the Manath Peechampilly Family Unit. The website i
 - JavaScript
 - D3.js (for the interactive family tree)
 - Bootstrap (for responsive design)
-- React (for the contact page component)
+- React (for the page components)
 
 ## Contributing
 
