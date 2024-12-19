@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Tree - Manath Family Association</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="style/normalize.css">
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body >
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo.jpg" alt="Logo" class="logo" style="height: 40px;justify-self: center;"> 
+        </a>
+        <div class="mx-auto" style="color: #3871c2; height: 40px; justify-self: center; font-size:x-large;" href="index.html">
+            <a href="index.html" style="text-decoration: none;"> Manath Peechampilly Family Unit</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto d-flex align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="family_tree.html">Family Tree</a>
+                </li>
+                <li class="nav-item">
+                    <button id="language-switcher" class="btn btn-outline-light btn-sm ml-2" onclick="window.location.reload();">Close Tree</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="content">
+        <main id="tree" class="chart-container"></main>
+        <div id="bio" class="bio-display"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="scripts/d3.min.js"></script>
+    <script src="scripts/js-yaml.min.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+body,
+html {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.chart-container svg {
+	display: block;
+}
+
+.chart-bg {
+	fill: #f0f0f0;
+	cursor: move;
+}
+
+.node--has-children {
+	cursor: pointer;
+}
+
+.box {
+	fill: #eee;
+	stroke: #333;
+	stroke-width: 1px;
+}
+
+.box--female {
+	stroke: mediumvioletred;
+	fill: #ffd6ee;
+}
+
+.box--male {
+	fill: #d6ddff;
+	stroke: royalblue;
+}
+
+.node-name,
+.spouse-name {
+	font: 12px sans-serif;
+}
+
+.link {
+	fill: none;
+	stroke-width: 2px;
+}
+
+.expand-icon {
+	font-size: 16px;
+}
+
+.bio-display {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3871c2; /* Main color */
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for a sleek look */
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white; /* Ensure the title color is white */
+}
+
+.navbar-right {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent white background on hover */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+#content {
+    padding: 20px;
+    color: white; /* Change text color to black */
+    /* Set background color to white */
+    height: calc(100vh - 70px); /* Adjust based on the height of the navbar */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+#tree {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-custom {
+    background-color: white;
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link,
+.navbar-custom .navbar-toggler-icon {
+    color: #3871c2;
+}
+.navbar-custom .nav-link:hover,
+.navbar-custom .navbar-toggler:hover {
+    color: #285a8e;
+}
+.navbar-custom .btn-outline-light {
+    color: #3871c2;
+    border-color: #3871c2;
+}
+.navbar-custom .btn-outline-light:hover {
+    color: white;
+    background-color: #3871c2;
+    border-color: #3871c2;
+}
