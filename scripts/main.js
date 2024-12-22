@@ -228,17 +228,19 @@ $(() => {
 			.attr('y', -boxH * 0.5)
 			.attr('width', d => d.data.boxW || boxW)
 			.attr('height', boxH)
-			.attr('class', d => {
-				const gender = String(d.data.gender).toLowerCase();
-				// spouse gender is assumedly reversed from main node
-				// TODO: pickup gender declared in spouse also
-				if (gender === 'female') {
-					return 'box box--male';
-				} else if (gender === 'male') {
-					return 'box box--female';
-				}
-				return 'box';
-			})
+			.attr('stroke', 'green')
+			.attr('fill', 'lightgreen')
+			// .attr('class', d => {
+			// 	const gender = String(d.data.gender).toLowerCase();
+			// 	// spouse gender is assumedly reversed from main node
+			// 	// TODO: pickup gender declared in spouse also
+			// 	if (gender === 'female') {
+			// 		return 'box box--male';
+			// 	} else if (gender === 'male') {
+			// 		return 'box box--female';
+			// 	}
+			// 	return 'box';
+			// })
 			.on('mouseover', d => {
 				const spouse = d.data.spouse;
 				const bio = d3.select('#bio');

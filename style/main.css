@@ -35,6 +35,11 @@ html {
 	stroke: royalblue;
 }
 
+.box-- {
+    fill: rgb(160, 223, 160);
+    stroke: green;
+}
+
 .node-name,
 .spouse-name {
 	font: 12px sans-serif;
@@ -104,7 +109,7 @@ html {
 
 #content {
     padding: 20px;
-    color: white; /* Change text color to black */
+    color: black; /* Change text color to black */
     /* Set background color to white */
     height: calc(100vh - 70px); /* Adjust based on the height of the navbar */
     overflow-y: auto; /* Enable vertical scrolling */
