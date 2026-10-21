@@ -46,18 +46,53 @@
                 <li class="nav-item">
                     <a class="nav-link" href="family_tree.html">Family Tree</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="album.html">Album</a>
+                </li>
             </ul>
             <button id="languageSwitcher" class="btn btn-secondary my-2 my-sm-0" onclick="window.location.reload();">Close Tree</button>
         </div>
     </nav>
+    <!-- Search Bar -->
+    <!-- Responsive Search Bar -->
+    <div class="container mt-3 mb-2">
+        <div class="row justify-content-center">
+            <!-- col-12 makes it 100% wide on phones, col-md-6 makes it 50% wide on laptops -->
+            <div class="col-12 col-md-6">
+                <input type="text" id="searchNodeInput" class="form-control" placeholder="Search for a family member and press Enter...">
+            </div>
+        </div>
+    </div>
+
     <div id="content">
         <main id="tree" class="chart-container"></main>
-        <div id="bio" class="bio-display"></div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <!-- 1. Node Details Modal (Make sure this is right above the scripts) -->
+    <div class="modal fade" id="nodeDetailsModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" style="color: #3871c2; font-weight: bold;">Family Member Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="modalImage" src="images/placeholder.png" alt="Profile" class="rounded-circle mb-3" style="width: 100px; height: 100px; object-fit: cover; border: 3px solid #3871c2;">
+                    <h3 id="modalName">Name</h3>
+                    <p id="modalBio" class="text-muted mt-2">Bio information will appear here.</p>
+                    <hr>
+                    <p class="mb-0"><strong>Spouse:</strong> <span id="modalSpouseText">N/A</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Scripts in the correct order (Only ONE jQuery) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="scripts/jquery-3.3.1.min.js"></script>
     <script src="scripts/d3.min.js"></script>
     <script src="scripts/js-yaml.min.js"></script>
     <script src="scripts/main.js"></script>

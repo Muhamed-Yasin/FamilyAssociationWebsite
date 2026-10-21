@@ -4,12 +4,14 @@
  * Initially based on the collapsible tree example: https://bl.ocks.org/d3noob/43a860bc0024792f8803bba8ca0d5ecd
  */
 $(() => {
-	const width = window.innerWidth;
-	const height = window.innerHeight;
+	// Instead of window.innerWidth/innerHeight, measure the target container
+    const contentDiv = document.getElementById('content');
+    const width = contentDiv.clientWidth;
+    const height = contentDiv.clientHeight
 	const duration = 750;
 	const boxW = 150;
-	const boxH = 30;
-	const spouseSpace = 50; // space between 2 spouses box from center
+	const boxH = 80;
+	const spouseSpace = 85; // space between 2 spouses box from center
 
 	let data = {
 		name: 'Top Level',
@@ -26,10 +28,20 @@ $(() => {
 	// appends a 'group' element to 'svg'
 	// moves the 'group' element to the top left margin
 	let svg = d3
-		.select('#tree')
-		.append('svg')
-		.attr('width', width)
-		.attr('height', height);
+        .select('#tree')
+        .append('svg')
+        .attr('width', width)
+        .attr('height', height);
+
+    // ADD THIS BLOCK: Create the circular mask for photos
+    const defs = svg.append('defs');
+    defs.append('clipPath')
+        .attr('id', 'avatar-clip')
+        .attr('clipPathUnits', 'objectBoundingBox')
+        .append('circle')
+        .attr('cx', 0.5)
+        .attr('cy', 0.5)
+        .attr('r', 0.5);
 
 	const rectBg = svg
 		.append('rect')
@@ -56,7 +68,7 @@ $(() => {
 	// window.rectBg = rectBg;
 	// window.data = data;
 
-	// $.get('data/greek-gods.yml').done(dataStr => {
+	// $.get('data/familytree.yml').done(dataStr => {
 	// 	// console.log(dataStr);
 	// 	data = jsyaml.load(dataStr);
 
@@ -85,7 +97,7 @@ $(() => {
 	window.rectBg = rectBg;
 	window.data = data;
 	
-	$.get('data/greek-gods.yml').done(dataStr => {
+	$.get('data/familytree.yml').done(dataStr => {
 		// console.log(dataStr);
 		data = jsyaml.load(dataStr);
 	
@@ -170,39 +182,67 @@ $(() => {
 		});
 
 		// Add Rectangle as text box for the nodes
-		personBlock
-			.append('rect')
-			.attr('x', d => (d.data.boxW ? -d.data.boxW / 2 : -boxW / 2))
-			.attr('y', -boxH * 0.5)
-			.attr('width', d => d.data.boxW || boxW)
-			.attr('height', boxH)
-			.attr('rx', 0) // corner radius x
-			.attr('ry', 0) // corner radius y
-			.attr('class', d => {
-				const gender = String(d.data.gender).toLowerCase();
-				if (gender === 'female') {
-					return 'box box--female';
-				} else if (gender === 'male') {
-					return 'box box--male';
-				}
-				return 'box';
-			})
-			.on('mouseover', d => {
-				const bio = d3.select('#bio');
-				if (d.data.bio) {
-					bio.html(`Bio: ${d.data.bio}`);
-				} else {
-					bio.html('');
-				}
-			});
+		// 1. The Box
+        personBlock
+            .append('rect')
+            .attr('x', d => (d.data.boxW ? -d.data.boxW / 2 : -boxW / 2))
+            .attr('y', -boxH * 0.5) // Starts at -40 (since boxH is 80)
+            .attr('width', d => d.data.boxW || boxW)
+            .attr('height', boxH)
+            .attr('rx', 5)
+            .attr('ry', 5)
+            .attr('class', d => {
+                const gender = String(d.data.gender).toLowerCase();
+                if (gender === 'female') return 'box box--female';
+                if (gender === 'male') return 'box box--male';
+                return 'box';
+            });
 
-		// Add labels for the nodes
-		personBlock
-			.append('text')
-			.classed('node-name', true)
-			.attr('dy', '.35em') // shift it to vertically middle
-			.attr('text-anchor', 'middle')
-			.text(d => d.data.name);
+        // 2. The Photo
+        personBlock
+            .append('image')
+            .attr('href', d => d.data.image ? d.data.image : 'images/placeholder.png')
+            .attr('x', -20)
+            .attr('y', -35) // Anchored near the top of the rect
+            .attr('width', 40)
+            .attr('height', 40)
+            .attr('clip-path', 'url(#avatar-clip)');
+
+        // 3. The Text
+        personBlock
+            .append('text')
+            .classed('node-name', true)
+            .attr('y', 20) // Absolute Y position below the image
+            .attr('text-anchor', 'middle')
+            .text(d => d.data.name);
+		
+		// Info Button Background (Main Node)
+        personBlock.append('circle')
+            .attr('cx', boxW / 2 - 15) // Position in top right corner
+            .attr('cy', -boxH / 2 + 15)
+            .attr('r', 10)
+            .attr('fill', '#ffffff')
+            .attr('stroke', '#3871c2')
+            .style('cursor', 'pointer')
+            .on('click', function(d) {
+                d3.event.stopPropagation(); // Stops the tree from expanding/collapsing
+                openNodeModal(d.data, false);
+            });
+
+        // Info Button Text 'i' (Main Node)
+        personBlock.append('text')
+            .attr('x', boxW / 2 - 15)
+            .attr('y', -boxH / 2 + 19)
+            .attr('text-anchor', 'middle')
+            .attr('font-size', '12px')
+            .attr('font-weight', 'bold')
+            .attr('fill', '#3871c2')
+            .style('cursor', 'pointer')
+            .text('i')
+            .on('click', function(d) {
+                d3.event.stopPropagation();
+                openNodeModal(d.data, false);
+            });
 
 		const nodeHasSpouse = nodeEnter.filter(d => !!d.data.spouse);
 
@@ -221,51 +261,69 @@ $(() => {
 		// Add spouse block
 		const spouseBlock = nodeHasSpouse.append('g').attr('transform', `translate(0, ${spouseSpace / 2})`);
 
-		// spouse block
-		spouseBlock
-			.append('rect')
-			.attr('x', d => `${d.data.boxW ? -d.data.boxW / 2 : -boxW / 2}`)
-			.attr('y', -boxH * 0.5)
-			.attr('width', d => d.data.boxW || boxW)
-			.attr('height', boxH)
-			.attr('stroke', 'green')
-			.attr('fill', 'lightgreen')
-			// .attr('class', d => {
-			// 	const gender = String(d.data.gender).toLowerCase();
-			// 	// spouse gender is assumedly reversed from main node
-			// 	// TODO: pickup gender declared in spouse also
-			// 	if (gender === 'female') {
-			// 		return 'box box--male';
-			// 	} else if (gender === 'male') {
-			// 		return 'box box--female';
-			// 	}
-			// 	return 'box';
-			// })
-			.on('mouseover', d => {
-				const spouse = d.data.spouse;
-				const bio = d3.select('#bio');
-				if (spouse.bio) {
-					bio.html(`Bio: ${spouse.bio}`);
-				} else {
-					bio.html('');
-				}
-			});
+		// Spouse Rectangle
+        spouseBlock
+            .append('rect')
+            .attr('x', d => `${d.data.boxW ? -d.data.boxW / 2 : -boxW / 2}`)
+            .attr('y', -boxH * 0.5)
+            .attr('width', d => d.data.boxW || boxW)
+            .attr('height', boxH)
+            .attr('rx', 5)
+            .attr('ry', 5)
+            .attr('stroke', 'green')
+            .attr('fill', 'lightgreen')
+			.attr('class', 'spouse-box');
 
-		// spouse text
-		spouseBlock
-			.append('text')
-			.classed('spouse-name', true)
-			.attr('dy', '0.35em')
-			.attr('text-anchor', 'middle')
-			.attr('style', d => {
-				const name = d.data.spouse.name || d.data.spouse;
-				// auto reduce font size so the long spouse names can fit
-				if (name.includes('&')) {
-					return 'font-size: 10px';
-				}
-			})
-			.text(d => `⚭${d.data.spouse.name || d.data.spouse}`);
+        // Spouse Photo
+        spouseBlock
+            .append('image')
+            .attr('href', d => (d.data.spouse && d.data.spouse.image) ? d.data.spouse.image : 'images/placeholder-female.png')
+            .attr('x', -20)
+            .attr('y', -35)
+            .attr('width', 40)
+            .attr('height', 40)
+            .attr('clip-path', 'url(#avatar-clip)');
 
+        // Spouse Text
+        spouseBlock
+            .append('text')
+            .classed('spouse-name', true)
+            .attr('y', 20) // Shift down to fit under the photo
+            .attr('text-anchor', 'middle')
+            .attr('style', d => {
+                const name = d.data.spouse.name || d.data.spouse;
+                if (name.includes('&')) return 'font-size: 10px';
+            })
+            .text(d => `⚭ ${d.data.spouse.name || d.data.spouse}`);
+
+		// Info Button Background (Spouse Node)
+        spouseBlock.append('circle')
+            .attr('cx', boxW / 2 - 15)
+            .attr('cy', -boxH / 2 + 15)
+            .attr('r', 10)
+            .attr('fill', '#ffffff')
+            .attr('stroke', 'green')
+            .style('cursor', 'pointer')
+            .on('click', function(d) {
+                d3.event.stopPropagation();
+                openNodeModal(d.data, true); // true = isSpouse
+            });
+
+        // Info Button Text 'i' (Spouse Node)
+        spouseBlock.append('text')
+            .attr('x', boxW / 2 - 15)
+            .attr('y', -boxH / 2 + 19)
+            .attr('text-anchor', 'middle')
+            .attr('font-size', '12px')
+            .attr('font-weight', 'bold')
+            .attr('fill', 'green')
+            .style('cursor', 'pointer')
+            .text('i')
+            .on('click', function(d) {
+                d3.event.stopPropagation();
+                openNodeModal(d.data, true);
+            });
+		
 		// Add expand indicator
 		nodeEnter
 			.filter(d => !!d._children)
@@ -379,15 +437,150 @@ $(() => {
 		return `M${d.y},${d.x} H${d.y + hy} V${s.x} H${s.y}`;
 	}
 
-	// Toggle children on click.
-	function click(d) {
-		if (d.children) {
-			d._children = d.children;
-			d.children = null;
-		} else {
-			d.children = d._children;
-			d._children = null;
-		}
-		update(d);
-	}
+	// Toggle children on click and auto-center
+    function click(d) {
+        if (d3.event && d3.event.defaultPrevented) return; // click suppressed
+
+        if (d.children) {
+            d._children = d.children;
+            d.children = null;
+        } else {
+            d.children = d._children;
+            d._children = null;
+        }
+        update(d);
+
+        const scale = d3.zoomTransform(svg.node()).k || 1;
+        rectBg.transition()
+            .duration(750)
+            .call(zoom.transform, d3.zoomIdentity.translate(width / 2 - d.y * scale, height / 2 - d.x * scale).scale(scale));
+    }
+
+	// Dedicated function to open the modal
+    function openNodeModal(data, isSpouse = false) {
+        let name, image, bio, spouseName;
+        
+        if (isSpouse) {
+            name = data.spouse.name || data.spouse;
+            image = data.spouse.image || 'images/placeholder-female.png';
+            bio = data.spouse.bio || 'No additional bio provided.';
+            spouseName = data.name; // The main node is their spouse
+        } else {
+            name = data.name;
+            image = data.image || 'images/placeholder.png';
+            bio = data.bio || 'No additional bio provided.';
+            spouseName = data.spouse ? (data.spouse.name || data.spouse) : 'N/A';
+        }
+
+        document.getElementById('modalName').textContent = name || 'Unknown';
+        document.getElementById('modalImage').src = image;
+        document.getElementById('modalBio').textContent = bio;
+        document.getElementById('modalSpouseText').textContent = spouseName;
+
+        $('#nodeDetailsModal').modal('show');
+    }
+
+	// Deep Search Functionality with Exact Match Priority & Spouse Recognition
+    let lastSearchTerm = "";
+    let searchResults = [];
+    let currentSearchIndex = 0;
+
+    $('#searchNodeInput').on('keyup', function(e) {
+        if (e.key === 'Enter') {
+            const searchTerm = $(this).val().toLowerCase().trim();
+            if (!searchTerm) return;
+
+            if (searchTerm !== lastSearchTerm) {
+                lastSearchTerm = searchTerm;
+                searchResults = [];
+                currentSearchIndex = 0;
+
+                // 1. Collect ALL matches and flag if it's a spouse
+                function searchTree(node) {
+                    const nodeName = node.data.name ? node.data.name.toLowerCase() : '';
+                    const spouseName = node.data.spouse ? (node.data.spouse.name || node.data.spouse).toLowerCase() : '';
+
+                    const matchMain = nodeName.includes(searchTerm);
+                    const matchSpouse = spouseName.includes(searchTerm);
+
+                    if (matchMain) searchResults.push({ node: node, isSpouseMatch: false });
+                    if (matchSpouse) searchResults.push({ node: node, isSpouseMatch: true });
+
+                    if (node.children) node.children.forEach(searchTree);
+                    if (node._children) node._children.forEach(searchTree);
+                }
+                
+                searchTree(root);
+
+                // 2. Sort results so EXACT matches appear first
+                searchResults.sort((a, b) => {
+                    const aNameStr = a.isSpouseMatch ? 
+                        (a.node.data.spouse.name || a.node.data.spouse).toLowerCase() : 
+                        (a.node.data.name || '').toLowerCase();
+                    const bNameStr = b.isSpouseMatch ? 
+                        (b.node.data.spouse.name || b.node.data.spouse).toLowerCase() : 
+                        (b.node.data.name || '').toLowerCase();
+                    
+                    const aExact = aNameStr === searchTerm ? 1 : 0;
+                    const bExact = bNameStr === searchTerm ? 1 : 0;
+                    
+                    return bExact - aExact; 
+                });
+            } else {
+                currentSearchIndex++;
+                if (currentSearchIndex >= searchResults.length) currentSearchIndex = 0;
+            }
+
+            if (searchResults.length > 0) {
+                const targetObj = searchResults[currentSearchIndex];
+                const targetNode = targetObj.node;
+
+                // Expand parents
+                let parent = targetNode.parent;
+                while (parent) {
+                    if (parent._children) {
+                        parent.children = parent._children;
+                        parent._children = null;
+                    }
+                    parent = parent.parent;
+                }
+                
+                update(root);
+
+                // Pan and zoom
+                const scale = 1.5; 
+                rectBg.transition()
+                    .duration(1000)
+                    .call(zoom.transform, d3.zoomIdentity.translate(width / 2 - targetNode.y * scale, height / 2 - targetNode.x * scale).scale(scale));
+                
+                // Reset all previous highlights
+                d3.selectAll('.box').style('fill', d => String(d.data.gender).toLowerCase() === 'female' ? '#ffd6ee' : '#d6ddff');
+                d3.selectAll('.spouse-box').style('fill', 'lightgreen');
+
+                // Highlight the specific matched box (Main or Spouse)
+                if (targetObj.isSpouseMatch) {
+                    d3.selectAll('.spouse-box')
+                        .filter(d => d.data.name === targetNode.data.name)
+                        .transition().duration(500).style('fill', '#ffeeb0') // Highlight
+                        .transition().duration(2000).style('fill', 'lightgreen'); // Fade back
+                } else {
+                    d3.selectAll('.box')
+                        .filter(d => d.data.name === targetNode.data.name)
+                        .transition().duration(500).style('fill', '#ffeeb0')
+                        .transition().duration(2000).style('fill', d => String(d.data.gender).toLowerCase() === 'female' ? '#ffd6ee' : '#d6ddff');
+                }
+                    
+                $('#searchNodeInput').attr('placeholder', `Match ${currentSearchIndex + 1} of ${searchResults.length}... (Press Enter for next)`);
+                
+            } else {
+                alert("Family member not found.");
+                $('#searchNodeInput').attr('placeholder', 'Search for a family member and press Enter...');
+                lastSearchTerm = ""; 
+            }
+        }
+    });
+    
+    $('#searchNodeInput').on('input', function() {
+        $(this).attr('placeholder', 'Search for a family member and press Enter...');
+    });
 });

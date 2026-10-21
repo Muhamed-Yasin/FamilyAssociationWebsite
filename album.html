@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manath Peechampilly Family Unit - Album</title>
+    <link rel="stylesheet" type="text/css" href="style/normalize.css">
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="images/logo.jpg" type="image/jpeg">
+    <style>
+        .navbar-nav { margin: 0 auto; }
+        .navbar-brand .logo { height: 40px; }
+        .navbar-brand .brand-text {
+            color: #3871c2;
+            font-size: x-large;
+            text-decoration: none;
+        }
+        .nav-link { color: #3871c2; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="images/logo.jpg" alt="Logo" class="logo">
+            <span class="brand-text ml-2">Manath Peechampilly Family Unit</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="family_tree.html">Family Tree</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="album.html">Album <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <button id="languageSwitcher" class="btn btn-secondary my-2 my-sm-0">Malayalam</button>
+        </div>
+    </nav>
+
+<div class="container mt-5 text-center">
+        <h2 id="albumTitle" class="smaller-display mb-4">Family Album</h2>
+        <p id="albumDesc" class="lead mb-5">Memories from our family gatherings and association events.</p>
+        
+        <!-- Gallery Grid: Now empty, populated automatically by album.js -->
+        <div class="gallery-grid"></div>
+    </div>
+
+    <div id="mediaModal" class="media-modal">
+        <span class="close-modal">&times;</span>
+        <div class="modal-nav prev-btn">&#10094;</div>
+        <div id="modalContent" class="modal-content-container"></div>
+        <div class="modal-nav next-btn">&#10095;</div>
+    </div>
+
+    <button id="scrollTopBtn" title="Go to top">&#8679;</button>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- Link the new script here -->
+    <script src="scripts/album.js"></script>
+    <script>
+        document.getElementById('languageSwitcher').addEventListener('click', function() {
+            var albumTitle = document.getElementById('albumTitle');
+            var albumDesc = document.getElementById('albumDesc');
+            var languageSwitcher = document.getElementById('languageSwitcher');
+            
+            if (languageSwitcher.textContent === 'English') {
+                albumTitle.textContent = 'Family Album';
+                albumDesc.textContent = 'Memories from our family gatherings and association events.';
+                languageSwitcher.textContent = 'Malayalam';
+            } else {
+                albumTitle.textContent = 'കുടുംബ ആൽബം';
+                albumDesc.textContent = 'നമ്മുടെ കുടുംബ സംഗമങ്ങളിൽ നിന്നുള്ള ഓർമ്മകൾ.';
+                languageSwitcher.textContent = 'English';
+            }
+        });
+    </script>
+</body>
+</html>

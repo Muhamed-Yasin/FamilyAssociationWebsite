@@ -108,12 +108,13 @@ html {
 }
 
 #content {
-    padding: 20px;
-    color: black; /* Change text color to black */
-    /* Set background color to white */
-    height: calc(100vh - 70px); /* Adjust based on the height of the navbar */
-    overflow-y: auto; /* Enable vertical scrolling */
-    overflow-x: hidden; /* Prevent horizontal overflow */
+    background-color: #f4f7f6;
+    /* Calculate remaining viewport height: 100vh minus navbar (~60px) and search bar (~60px) */
+    height: calc(100vh - 120px); 
+    width: 100%;
+    overflow: hidden; /* Disables standard scrolling, relying purely on D3 panning */
+    padding: 0; /* Remove padding to prevent overflow */
+    position: relative;
 }
 
 #tree {
@@ -162,4 +163,116 @@ html {
     background-color: #f8f9fa;
     border-color: #f8f9fa;
     color: #0056b3;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+.gallery-grid img:hover {
+    transform: scale(1.03);
+}
+.gallery-grid img,
+.gallery-grid video {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* --- LIGHTBOX MODAL STYLES --- */
+.media-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.modal-content-container {
+    max-width: 80%;
+    max-height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content-container img,
+.modal-content-container video {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.close-modal:hover {
+    color: #bbb;
+}
+
+.modal-nav {
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 20px;
+    user-select: none;
+    transition: 0.3s;
+}
+
+.modal-nav:hover {
+    color: #bbb;
+}
+
+/* --- SCROLL TO TOP BUTTON --- */
+#scrollTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 30px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 1030; /* Make sure it does not overlap with modals */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #3871c2; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Rounded button */
+    font-size: 24px; /* Increase font size */
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    transition: background-color 0.3s, transform 0.3s;
+    /* Center the arrow inside the circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#scrollTopBtn.show {
+    display: flex; /* We will toggle this class in JavaScript */
+}
+
+#scrollTopBtn:hover {
+    background-color: #285a8e; /* Darker blue on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
 }
