@@ -1,550 +1,14 @@
-// Add the filenames of the images you place in the images/album/ folder here
-const albumImages = [
-    "DSC04833.JPG",
-    "DSC04834.JPG",
-    "DSC04835.JPG",
-    "DSC04836.JPG",
-    "DSC04837.JPG",
-    "DSC04838.JPG",
-    "DSC04839.JPG",
-    "DSC04840.JPG",
-    "DSC04841.JPG",
-    "DSC04842.JPG",
-    "DSC04843.JPG",
-    "DSC04844.JPG",
-    "DSC04845.JPG",
-    "DSC04846.JPG",
-    "DSC04847.JPG",
-    "DSC04848.JPG",
-    "DSC04849.JPG",
-    "DSC04850.JPG",
-    "DSC04851.JPG",
-    "DSC04852.JPG",
-    "DSC04853.JPG",
-    "DSC04854.JPG",
-    "DSC04855.JPG",
-    "DSC04856.JPG",
-    "DSC04857.JPG",
-    "DSC04858.JPG",
-    "DSC04859.JPG",
-    "DSC04860.JPG",
-    "DSC04861.JPG",
-    "DSC04862.JPG",
-    "DSC04863.JPG",
-    "DSC04864.JPG",
-    "DSC04865.JPG",
-    "DSC04866.JPG",
-    "DSC04867.JPG",
-    "DSC04868.JPG",
-    "DSC04869.JPG",
-    "DSC04870.JPG",
-    "DSC04871.JPG",
-    "DSC04872.JPG",
-    "DSC04873.JPG",
-    "DSC04874.JPG",
-    "DSC04875.JPG",
-    "DSC04876.JPG",
-    "DSC04877.JPG",
-    "DSC04878.JPG",
-    "DSC04879.JPG",
-    "DSC04880.JPG",
-    "DSC04881.JPG",
-    "DSC04882.JPG",
-    "DSC04883.JPG",
-    "DSC04884.JPG",
-    "DSC04885.JPG",
-    "DSC04886.JPG",
-    "DSC04887.JPG",
-    "DSC04888.JPG",
-    "DSC04889.JPG",
-    "DSC04890.JPG",
-    "DSC04891.JPG",
-    "DSC04892.JPG",
-    "DSC04893.JPG",
-    "DSC04894.JPG",
-    "DSC04895.JPG",
-    "DSC04896.JPG",
-    "DSC04897.JPG",
-    "DSC04898.JPG",
-    "DSC04899.JPG",
-    "DSC04900.JPG",
-    "DSC04901.JPG",
-    "DSC04902.JPG",
-    "DSC04903.JPG",
-    "DSC04904.JPG",
-    "DSC04905.JPG",
-    "DSC04906.JPG",
-    "DSC04907.JPG",
-    "DSC04908.JPG",
-    "DSC04909.JPG",
-    "DSC04910.JPG",
-    "DSC04911.JPG",
-    "DSC04912.JPG",
-    "DSC04913.JPG",
-    "DSC04914.JPG",
-    "DSC04915.JPG",
-    "DSC04916.JPG",
-    "DSC04917.JPG",
-    "DSC04918.JPG",
-    "DSC04919.JPG",
-    "DSC04920.JPG",
-    "DSC04921.JPG",
-    "DSC04922.JPG",
-    "DSC04923.JPG",
-    "DSC04924.JPG",
-    "DSC04925.JPG",
-    "DSC04926.JPG",
-    "DSC04927.JPG",
-    "DSC04928.JPG",
-    "DSC04929.JPG",
-    "DSC04930.JPG",
-    "DSC04931.JPG",
-    "DSC04932.JPG",
-    "DSC04933.JPG",
-    "DSC04934.JPG",
-    "DSC04935.JPG",
-    "DSC04936.JPG",
-    "DSC04937.JPG",
-    "DSC04938.JPG",
-    "DSC04939.JPG",
-    "DSC04940.JPG",
-    "DSC04941.JPG",
-    "DSC04942.JPG",
-    "DSC04943.JPG",
-    "DSC04944.JPG",
-    "DSC04945.JPG",
-    "DSC04946.JPG",
-    "DSC04947.JPG",
-    "DSC04948.JPG",
-    "DSC04949.JPG",
-    "DSC04950.JPG",
-    "DSC04951.JPG",
-    "DSC04952.JPG",
-    "DSC04953.JPG",
-    "DSC04954.JPG",
-    "DSC04955.JPG",
-    "DSC04956.JPG",
-    "DSC04957.JPG",
-    "DSC04958.JPG",
-    "DSC04959.JPG",
-    "DSC04960.JPG",
-    "DSC04961.JPG",
-    "DSC04962.JPG",
-    "DSC04963.JPG",
-    "DSC04964.JPG",
-    "DSC04965.JPG",
-    "DSC04966.JPG",
-    "DSC04967.JPG",
-    "DSC04968.JPG",
-    "DSC04969.JPG",
-    "DSC04970.JPG",
-    "DSC04971.JPG",
-    "DSC04972.JPG",
-    "DSC04973.JPG",
-    "DSC04974.JPG",
-    "DSC04975.JPG",
-    "DSC04976.JPG",
-    "DSC04977.JPG",
-    "DSC04978.JPG",
-    "DSC04979.JPG",
-    "DSC04980.JPG",
-    "DSC04981.JPG",
-    "DSC04982.JPG",
-    "DSC04983.JPG",
-    "DSC04984.JPG",
-    "DSC04985.JPG",
-    "DSC04986.JPG",
-    "DSC04987.JPG",
-    "DSC04988.JPG",
-    "DSC04989.JPG",
-    "DSC04990.JPG",
-    "DSC04991.JPG",
-    "DSC04992.JPG",
-    "DSC04993.JPG",
-    "DSC04994.JPG",
-    "DSC04995.JPG",
-    "DSC04996.JPG",
-    "DSC04997.JPG",
-    "DSC04998.JPG",
-    "DSC04999.JPG",
-    "DSC05000.JPG",
-    "DSC05001.JPG",
-    "DSC05002.JPG",
-    "DSC05003.JPG",
-    "DSC05004.JPG",
-    "DSC05005.JPG",
-    "DSC05006.JPG",
-    "DSC05007.JPG",
-    "DSC05008.JPG",
-    "DSC05009.JPG",
-    "DSC05010.JPG",
-    "DSC05011.JPG",
-    "DSC05012.JPG",
-    "DSC05013.JPG",
-    "DSC05014.JPG",
-    "DSC05015.JPG",
-    "DSC05016.JPG",
-    "DSC05017.JPG",
-    "DSC05018.JPG",
-    "DSC05019.JPG",
-    "DSC05020.JPG",
-    "DSC05021.JPG",
-    "DSC05022.JPG",
-    "DSC05023.JPG",
-    "DSC05024.JPG",
-    "DSC05025.JPG",
-    "DSC05026.JPG",
-    "DSC05027.JPG",
-    "DSC05028.JPG",
-    "DSC05029.JPG",
-    "DSC05030.JPG",
-    "DSC05031.JPG",
-    "DSC05032.JPG",
-    "DSC05033.JPG",
-    "DSC05034.JPG",
-    "DSC05035.JPG",
-    "DSC05036.JPG",
-    "DSC05039.JPG",
-    "DSC05040.JPG",
-    "DSC05041.JPG",
-    "DSC05042.JPG",
-    "DSC05043.JPG",
-    "DSC05044.JPG",
-    "DSC05045.JPG",
-    "DSC05046.JPG",
-    "DSC05047.JPG",
-    "DSC05048.JPG",
-    "DSC05049.JPG",
-    "DSC05050.JPG",
-    "DSC05051.JPG",
-    "DSC05052.JPG",
-    "DSC05053.JPG",
-    "DSC05054.JPG",
-    "DSC05055.JPG",
-    "DSC05056.JPG",
-    "DSC05057.JPG",
-    "DSC05058.JPG",
-    "DSC05059.JPG",
-    "DSC05060.JPG",
-    "DSC05061.JPG",
-    "DSC05062.JPG",
-    "DSC05063.JPG",
-    "DSC05064.JPG",
-    "DSC05065.JPG",
-    "DSC05066.JPG",
-    "DSC05067.JPG",
-    "DSC05068.JPG",
-    "DSC05069.JPG",
-    "DSC05070.JPG",
-    "DSC05071.JPG",
-    "DSC05072.JPG",
-    "DSC05073.JPG",
-    "DSC05074.JPG",
-    "DSC05075.JPG",
-    "DSC05076.JPG",
-    "DSC05077.JPG",
-    "DSC05078.JPG",
-    "DSC05079.JPG",
-    "DSC05080.JPG",
-    "DSC05081.JPG",
-    "DSC05082.JPG",
-    "DSC05083.JPG",
-    "DSC05084.JPG",
-    "DSC05085.JPG",
-    "DSC05086.JPG",
-    "DSC05087.JPG",
-    "DSC05088.JPG",
-    "DSC05089.JPG",
-    "DSC05090.JPG",
-    "DSC05091.JPG",
-    "DSC05092.JPG",
-    "DSC05093.JPG",
-    "DSC05094.JPG",
-    "DSC05095.JPG",
-    "DSC05096.JPG",
-    "DSC05097.JPG",
-    "DSC05098.JPG",
-    "DSC05099.JPG",
-    "DSC05100.JPG",
-    "DSC05101.JPG",
-    "DSC05102.JPG",
-    "DSC05103.JPG",
-    "DSC05104.JPG",
-    "DSC05105.JPG",
-    "DSC05106.JPG",
-    "DSC05107.JPG",
-    "DSC05108.JPG",
-    "DSC05109.JPG",
-    "DSC05110.JPG",
-    "DSC05111.JPG",
-    "DSC05112.JPG",
-    "DSC05113.JPG",
-    "DSC05114.JPG",
-    "DSC05115.JPG",
-    "DSC05116.JPG",
-    "DSC05117.JPG",
-    "DSC05118.JPG",
-    "DSC05119.JPG",
-    "DSC05120.JPG",
-    "DSC05121.JPG",
-    "DSC05122.JPG",
-    "DSC05123.JPG",
-    "DSC05124.JPG",
-    "DSC05125.JPG",
-    "DSC05126.JPG",
-    "DSC05127.JPG",
-    "DSC05128.JPG",
-    "DSC05129.JPG",
-    "DSC05130.JPG",
-    "DSC05131.JPG",
-    "DSC05132.JPG",
-    "DSC05133.JPG",
-    "DSC05134.JPG",
-    "DSC05135.JPG",
-    "DSC05136.JPG",
-    "DSC05137.JPG",
-    "DSC05138.JPG",
-    "DSC05139.JPG",
-    "DSC05140.JPG",
-    "DSC05141.JPG",
-    "DSC05142.JPG",
-    "DSC05143.JPG",
-    "DSC05144.JPG",
-    "DSC05145.JPG",
-    "DSC05146.JPG",
-    "DSC05147.JPG",
-    "DSC05148.JPG",
-    "DSC05149.JPG",
-    "DSC05150.JPG",
-    "DSC05151.JPG",
-    "DSC05152.JPG",
-    "DSC05153.JPG",
-    "DSC05154.JPG",
-    "DSC05155.JPG",
-    "DSC05156.JPG",
-    "DSC05157.JPG",
-    "DSC05158.JPG",
-    "DSC05159.JPG",
-    "DSC05160.JPG",
-    "DSC05161.JPG",
-    "DSC05162.JPG",
-    "DSC05163.JPG",
-    "DSC05164.JPG",
-    "DSC05165.JPG",
-    "DSC05166.JPG",
-    "DSC05167.JPG",
-    "DSC05168.JPG",
-    "DSC05169.JPG",
-    "DSC05170.JPG",
-    "DSC05171.JPG",
-    "DSC05172.JPG",
-    "DSC05173.JPG",
-    "DSC05174.JPG",
-    "DSC05175.JPG",
-    "DSC05176.JPG",
-    "DSC05177.JPG",
-    "DSC05178.JPG",
-    "DSC05179.JPG",
-    "DSC05180.JPG",
-    "DSC05181.JPG",
-    "DSC05182.JPG",
-    "DSC05183.JPG",
-    "DSC05184.JPG",
-    "DSC05185.JPG",
-    "DSC05186.JPG",
-    "DSC05187.JPG",
-    "DSC05188.JPG",
-    "DSC05189.JPG",
-    "DSC05190.JPG",
-    "DSC05191.JPG",
-    "DSC05192.JPG",
-    "DSC05193.JPG",
-    "DSC05194.JPG",
-    "DSC05195.JPG",
-    "DSC05196.JPG",
-    "DSC05197.JPG",
-    "DSC05198.JPG",
-    "DSC05199.JPG",
-    "DSC05200.JPG",
-    "DSC05201.JPG",
-    "DSC05202.JPG",
-    "DSC05203.JPG",
-    "DSC05204.JPG",
-    "DSC05205.JPG",
-    "DSC05206.JPG",
-    "DSC05207.JPG",
-    "DSC05208.JPG",
-    "DSC05209.JPG",
-    "DSC05210.JPG",
-    "DSC05211.JPG",
-    "DSC05212.JPG",
-    "DSC05213.JPG",
-    "DSC05214.JPG",
-    "DSC05215.JPG",
-    "DSC05216.JPG",
-    "DSC05217.JPG",
-    "DSC05218.JPG",
-    "DSC05219.JPG",
-    "DSC05220.JPG",
-    "DSC05221.JPG",
-    "DSC05222.JPG",
-    "DSC05223.JPG",
-    "DSC05224.JPG",
-    "DSC05225.JPG",
-    "DSC05226.JPG",
-    "DSC05227.JPG",
-    "DSC05228.JPG",
-    "DSC05229.JPG",
-    "DSC05231.JPG",
-    "DSC05232.JPG",
-    "DSC05233.JPG",
-    "DSC05234.JPG",
-    "DSC05235.JPG",
-    "DSC05236.JPG",
-    "DSC05237.JPG",
-    "DSC05238.JPG",
-    "DSC05239.JPG",
-    "DSC05240.JPG",
-    "DSC05241.JPG",
-    "DSC05242.JPG",
-    "DSC05243.JPG",
-    "DSC05244.JPG",
-    "DSC05245.JPG",
-    "DSC05246.JPG",
-    "DSC05247.JPG",
-    "DSC05248.JPG",
-    "DSC05249.JPG",
-    "DSC05250.JPG",
-    "DSC05251.JPG",
-    "DSC05252.JPG",
-    "DSC05253.JPG",
-    "DSC05254.JPG",
-    "DSC05255.JPG",
-    "DSC05256.JPG",
-    "DSC05257.JPG",
-    "DSC05258.JPG",
-    "DSC05259.JPG",
-    "DSC05260.JPG",
-    "DSC05261.JPG",
-    "DSC05262.JPG",
-    "DSC05263.JPG",
-    "DSC05264.JPG",
-    "DSC05265.JPG",
-    "DSC05266.JPG",
-    "DSC05267.JPG",
-    "DSC05268.JPG",
-    "DSC05269.JPG",
-    "DSC05270.JPG",
-    "DSC05271.JPG",
-    "DSC05272.JPG",
-    "DSC05273.JPG",
-    "DSC05274.JPG",
-    "DSC05275.JPG",
-    "DSC05276.JPG",
-    "DSC05277.JPG",
-    "DSC05278.JPG",
-    "DSC05279.JPG",
-    "DSC05280.JPG",
-    "DSC05281.JPG",
-    "DSC05282.JPG",
-    "DSC05283.JPG",
-    "DSC05284.JPG",
-    "DSC05285.JPG",
-    "DSC05286.JPG",
-    "DSC05287.JPG",
-    "DSC05288.JPG",
-    "DSC05289.JPG",
-    "DSC05290.JPG",
-    "DSC05291.JPG",
-    "DSC05292.JPG",
-    "DSC05293.JPG",
-    "DSC05294.JPG",
-    "DSC05295.JPG",
-    "DSC05296.JPG",
-    "DSC05297.JPG",
-    "DSC05298.JPG",
-    "DSC05299.JPG",
-    "DSC05300.JPG",
-    "DSC05301.JPG",
-    "DSC05302.JPG",
-    "DSC05303.JPG",
-    "DSC05304.JPG",
-    "DSC05305.JPG",
-    "DSC05306.JPG",
-    "DSC05307.JPG",
-    "DSC05308.JPG",
-    "DSC05309.JPG",
-    "DSC05310.JPG",
-    "DSC05311.JPG",
-    "DSC05312.JPG",
-    "DSC05313.JPG",
-    "DSC05314.JPG",
-    "DSC05315.JPG",
-    "DSC05316.JPG",
-    "DSC05317.JPG",
-    "DSC05318.JPG",
-    "DSC05319.JPG",
-    "DSC05320.JPG",
-    "DSC05321.JPG",
-    "DSC05322.JPG",
-    "DSC05323.JPG",
-    "DSC05324.JPG",
-    "DSC05325.JPG",
-    "DSC05326.JPG",
-    "DSC05327.JPG",
-    "DSC05328.JPG",
-    "DSC05329.JPG",
-    "DSC05330.JPG",
-    "DSC05331.JPG",
-    "DSC05332.JPG",
-    "DSC05333.JPG",
-    "DSC05334.JPG",
-    "DSC05335.JPG",
-    "DSC05336.JPG",
-    "DSC05337.JPG",
-    "DSC05338.JPG",
-    "DSC05339.JPG",
-    "DSC05340.JPG",
-    "DSC05341.JPG",
-    "WhatsApp Image 2024-12-25 at 11.00.38_2dcd6c1a.jpg",
-    "WhatsApp Image 2024-12-25 at 11.00.40_c1cdb020.jpg",
-    "WhatsApp Image 2024-12-25 at 11.00.43_97ba8cb8.jpg",
-    "WhatsApp Image 2024-12-25 at 11.00.50_30e5b4a5.jpg",
-    "WhatsApp Image 2024-12-25 at 11.05.07_94f44180.jpg",
-    "WhatsApp Image 2024-12-25 at 11.05.10_1ec63ec8.jpg",
-    "WhatsApp Image 2024-12-25 at 11.05.12_2db70d3d.jpg",
-    "WhatsApp Image 2024-12-25 at 11.05.14_ca445dbc.jpg",
-    "WhatsApp Image 2024-12-25 at 11.05.17_2d01d3e1.jpg",
-    "WhatsApp Image 2024-12-25 at 11.05.18_426ba401.jpg",
-    "WhatsApp Image 2024-12-25 at 11.05.18_cc9b2620.jpg",
-    "WhatsApp Image 2024-12-25 at 11.05.18_fbec98e7.jpg",
-    "WhatsApp Image 2024-12-25 at 11.05.19_29421ccd.jpg",
-    "WhatsApp Image 2024-12-25 at 11.05.19_7cfc3170.jpg",
-    "WhatsApp Image 2024-12-25 at 11.05.19_fc0f110f.jpg",
-    "WhatsApp Image 2024-12-25 at 11.05.20_22b5afaa.jpg",
-    "WhatsApp Image 2024-12-25 at 11.05.20_426520ba.jpg",
-    "WhatsApp Image 2024-12-25 at 11.05.20_81a82a5f.jpg",
-    "WhatsApp Image 2024-12-25 at 11.05.20_8af39f0f.jpg",
-    "WhatsApp Video 2024-12-25 at 11.03.01_2f5122aa.mp4",
-    "WhatsApp Video 2024-12-25 at 11.03.06_205c8eb7.mp4",
-    "WhatsApp Video 2024-12-25 at 11.03.10_41a97031.mp4",
-    "WhatsApp Video 2024-12-25 at 11.06.02_ca738b84.mp4",
-    "WhatsApp Video 2024-12-25 at 11.06.08_0eb3da5a.mp4",
-    "WhatsApp Video 2024-12-25 at 11.07.01_ad314bab.mp4",
-    "WhatsApp Video 2024-12-25 at 11.07.30_f2c645d7.mp4",
-    "WhatsApp Video 2024-12-25 at 11.07.52_0adb09e2.mp4",
-    "WhatsApp Video 2024-12-25 at 11.08.13_d670ba64.mp4",
-    "WhatsApp Video 2024-12-25 at 11.08.55_4106f022.mp4",
-    "WhatsApp Video 2024-12-25 at 11.09.08_ad55a964.mp4",
-    "WhatsApp Video 2024-12-25 at 11.09.18_2e911623.mp4",
-    "WhatsApp Video 2024-12-25 at 11.10.13_739e1b41.mp4",
-    "WhatsApp Video 2024-12-25 at 11.10.19_9a3a1556.mp4",
-    "WhatsApp Video 2024-12-25 at 11.11.46_01c68ce8.mp4",
-    "WhatsApp Video 2024-12-25 at 11.11.47_31d649b6.mp4",
-    "WhatsApp Video 2024-12-25 at 11.11.52_fe0af86e.mp4"
-];
+// Add your Cloudinary Cloud Name here
+const cloudName = 'hgnumqmy';
+const tag = 'family-album'; 
 
-document.addEventListener('DOMContentLoaded', () => {
+// The auto-generated JSON list of all images with this tag
+const listUrl = `https://res.cloudinary.com/${cloudName}/image/list/${tag}.json`;
+
+let albumImages = [];
+let currentIndex = 0;
+
+document.addEventListener('DOMContentLoaded', async () => {
     const galleryGrid = document.querySelector('.gallery-grid');
     const modal = document.getElementById('mediaModal');
     const modalContent = document.getElementById('modalContent');
@@ -552,29 +16,35 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');
     
-    let currentIndex = 0;
-    const videoExtensions = ['.mp4', '.webm', '.mov', '.mkv'];
+    galleryGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center;">Loading family memories...</p>';
 
-    galleryGrid.innerHTML = '';
-
-    // 1. Generate the Grid
-    albumImages.forEach((fileName, index) => {
-        const isVideo = videoExtensions.some(ext => fileName.toLowerCase().endsWith(ext));
-        let mediaElement = document.createElement(isVideo ? 'video' : 'img');
+    try {
+        // Fetch the list of images from Cloudinary
+        const response = await fetch(listUrl);
+        if (!response.ok) throw new Error('Network response was not ok');
         
-        mediaElement.src = `images/album/${fileName}`;
-        if (isVideo) {
-            mediaElement.preload = 'metadata';
-        } else {
-            mediaElement.alt = `Family Event - ${fileName}`;
-        }
+        const data = await response.json();
+        albumImages = data.resources; // Array of image objects from Cloudinary
+        galleryGrid.innerHTML = ''; 
 
-        // Click event to open modal
-        mediaElement.addEventListener('click', () => openModal(index));
-        galleryGrid.appendChild(mediaElement);
-    });
+        // 1. Generate the Grid with Compressed Thumbnails
+        albumImages.forEach((imgData, index) => {
+            // Request a compressed, auto-formatted 400x300 thumbnail
+            const thumbUrl = `https://res.cloudinary.com/${cloudName}/image/upload/c_fill,w_400,h_300,q_auto,f_auto/${imgData.public_id}.jpg`;
+            
+            const imgElement = document.createElement('img');
+            imgElement.src = thumbUrl;
+            imgElement.alt = `Family Event`;
+            imgElement.addEventListener('click', () => openModal(index));
+            
+            galleryGrid.appendChild(imgElement);
+        });
+    } catch (error) {
+        console.error('Error fetching album:', error);
+        galleryGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center;">Failed to load the album. Please check your Cloudinary settings.</p>';
+    }
 
-    // 2. Modal Logic
+    // 2. Modal Logic for High-Resolution Images
     function openModal(index) {
         currentIndex = index;
         modal.style.display = 'flex';
@@ -583,28 +53,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function closeModal() {
         modal.style.display = 'none';
-        modalContent.innerHTML = ''; // Clear content to stop videos from playing in background
+        modalContent.innerHTML = ''; 
     }
 
     function updateModalContent() {
-        modalContent.innerHTML = ''; // Clear previous
-        const fileName = albumImages[currentIndex];
-        const isVideo = videoExtensions.some(ext => fileName.toLowerCase().endsWith(ext));
+        modalContent.innerHTML = ''; 
+        const imgData = albumImages[currentIndex];
         
-        let mediaElement = document.createElement(isVideo ? 'video' : 'img');
-        mediaElement.src = `images/album/${fileName}`;
+        // Request the full-screen image, optimized for the browser
+        const fullResUrl = `https://res.cloudinary.com/${cloudName}/image/upload/q_auto,f_auto/${imgData.public_id}.jpg`;
         
-        if (isVideo) {
-            mediaElement.controls = true;
-            mediaElement.autoplay = true;
-        }
-
-        modalContent.appendChild(mediaElement);
+        const imgElement = document.createElement('img');
+        imgElement.src = fullResUrl;
+        
+        modalContent.appendChild(imgElement);
     }
 
     function changeMedia(direction) {
         currentIndex += direction;
-        // Wrap around logic
         if (currentIndex < 0) currentIndex = albumImages.length - 1;
         if (currentIndex >= albumImages.length) currentIndex = 0;
         updateModalContent();
@@ -615,12 +81,10 @@ document.addEventListener('DOMContentLoaded', () => {
     prevBtn.addEventListener('click', () => changeMedia(-1));
     nextBtn.addEventListener('click', () => changeMedia(1));
 
-    // Close when clicking outside the image
     modal.addEventListener('click', (e) => {
         if (e.target === modal) closeModal();
     });
 
-    // Keyboard navigation
     document.addEventListener('keydown', (e) => {
         if (modal.style.display === 'flex') {
             if (e.key === 'Escape') closeModal();
@@ -628,10 +92,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.key === 'ArrowRight') changeMedia(1);
         }
     });
+
     // --- SCROLL TO TOP LOGIC ---
     const scrollTopBtn = document.getElementById('scrollTopBtn');
-
-    // When the user scrolls down 300px from the top of the document, show the button
     window.addEventListener('scroll', () => {
         if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
             scrollTopBtn.classList.add('show');
@@ -640,11 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // When the user clicks on the button, scroll to the top of the document smoothly
     scrollTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 });
