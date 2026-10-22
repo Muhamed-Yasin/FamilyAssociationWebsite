@@ -11,7 +11,7 @@ $(() => {
 	const duration = 750;
 	const boxW = 150;
 	const boxH = 80;
-	const spouseSpace = 85; // space between 2 spouses box from center
+	const spouseSpace = 170; // space between 2 spouses box from center
 
 	let data = {
 		name: 'Top Level',
@@ -103,7 +103,7 @@ $(() => {
 	
 		// Assigns parent, children, height, depth
 		root = d3.hierarchy(data, d => d.children);
-		root.x0 = height / 2;
+		root.x0 = width / 2;
 		root.y0 = 0;
 	
 		// Collapse after the second level
@@ -117,26 +117,21 @@ $(() => {
 	const treemap = d3
 		.tree()
 		.size([height, width])
-		.nodeSize([boxH, boxW])
+		.nodeSize([boxW, boxH])
 		.separation(function(a, b) {
-			// leave some space for the spouse block
+			// Leave enough space for the side-by-side spouse blocks
 			if (b.data.spouse) {
 				if (a.data.spouse) {
-					// both a & b has spouse blocks
-					return 3.5;
+					return 2.5; // Both have spouses - maximum gap needed
 				}
-				// only b has spouse block
-				return 2.5;
+				return 1.8; // Only b has a spouse
 			} else if (a.data.spouse) {
-				// only a has spouse block
-				return 2.5;
+				return 1.8; // Only a has a spouse
 			} else if (a.parent === b.parent) {
-				// single siblings are close to save space
-				return 1.2;
+				return 1.2; // Single siblings without spouses
 			}
-
-			//else (single cousins)
-			return 2;
+			// Single cousins without spouses
+			return 1.4; 
 		});
 
 	// Collapse the node and all it's children
@@ -173,12 +168,12 @@ $(() => {
 			.enter()
 			.insert('g', ':first-child') // children should be below parents so that the transition looks nicer
 			.attr('class', d => (d._children ? 'node node--has-children' : 'node'))
-			.attr('transform', () => `translate(${source.y0},${source.x0})`)
+			.attr('transform', () => `translate(${source.x0},${source.y0})`)
 			.on('click', click);
 
 		// Add person block
 		const personBlock = nodeEnter.append('g').attr('transform', d => {
-			return d.data.spouse ? `translate(0, ${-spouseSpace / 2})` : 'translate(0, 0)';
+			return d.data.spouse ? `translate(${-spouseSpace / 2}, 0)` : 'translate(0, 0)';
 		});
 
 		// Add Rectangle as text box for the nodes
@@ -250,16 +245,14 @@ $(() => {
 		nodeHasSpouse
 			.insert('line', ':first-child')
 			.attr('class', 'link')
-			.attr('stroke', d => {
-				return linkColors(d.depth);
-			})
-			.attr('x1', 0)
-			.attr('y1', -spouseSpace / 2)
-			.attr('x2', 0)
-			.attr('y2', spouseSpace / 2);
+			.attr('stroke', d => linkColors(d.depth))
+			.attr('x1', -spouseSpace / 2)
+			.attr('y1', 0)
+			.attr('x2', spouseSpace / 2)
+			.attr('y2', 0);
 
 		// Add spouse block
-		const spouseBlock = nodeHasSpouse.append('g').attr('transform', `translate(0, ${spouseSpace / 2})`);
+		const spouseBlock = nodeHasSpouse.append('g').attr('transform', `translate(${spouseSpace / 2}, 0)`);
 
 		// Spouse Rectangle
         spouseBlock
@@ -325,13 +318,14 @@ $(() => {
             });
 		
 		// Add expand indicator
+		// Add expand indicator
 		nodeEnter
 			.filter(d => !!d._children)
 			.append('text')
 			.classed('expand-icon', true)
 			.attr('text-anchor', 'middle')
-			.attr('x', boxW / 2 + 10)
-			.attr('y', 5) // shift middle
+			.attr('x', 0) // Centered between the spouses
+			.attr('y', boxH / 2 + 15) // Placed just below the bottom edge of the boxes
 			.attr('visibility', d => (d.children ? 'hidden' : 'visible'))
 			.text('⊕');
 
@@ -342,7 +336,7 @@ $(() => {
 		nodeUpdate
 			.transition()
 			.duration(duration)
-			.attr('transform', d => `translate(${d.y},${d.x})`);
+			.attr('transform', d => `translate(${d.x},${d.y})`);
 
 		// Update the expand / close indicator
 		nodeUpdate.selectAll('text.expand-icon').attr('visibility', d => (d.children ? 'hidden' : 'visible'));
@@ -352,7 +346,7 @@ $(() => {
 			.exit()
 			.transition()
 			.duration(duration)
-			.attr('transform', () => `translate(${source.y},${source.x})`)
+			.attr('transform', () => `translate(${source.x},${source.y})`)
 			.remove();
 
 		// On exit reduce the opacity of text labels
@@ -386,9 +380,7 @@ $(() => {
 			.duration(duration)
 			.attr('d', d => {
 				if (d.data.spouse) {
-					// move link start (at child) a bit up since it is at new position
-					// because of spouse
-					return connector({ y: d.y, x: d.x - spouseSpace / 2 }, d.parent);
+					return connector({ x: d.x - spouseSpace / 2, y: d.y }, d.parent);
 				}
 				return connector(d, d.parent);
 			});
@@ -431,10 +423,9 @@ $(() => {
 		return path;
 	}
 
-	// Mind that we are drawing with x & y swapped to turn the tree horizontal
 	function elbow(s, d) {
 		const hy = (s.y - d.y) / 2;
-		return `M${d.y},${d.x} H${d.y + hy} V${s.x} H${s.y}`;
+		return `M${d.x},${d.y} V${d.y + hy} H${s.x} V${s.y}`;
 	}
 
 	// Toggle children on click and auto-center
@@ -452,8 +443,8 @@ $(() => {
 
         const scale = d3.zoomTransform(svg.node()).k || 1;
         rectBg.transition()
-            .duration(750)
-            .call(zoom.transform, d3.zoomIdentity.translate(width / 2 - d.y * scale, height / 2 - d.x * scale).scale(scale));
+		.duration(750)
+		.call(zoom.transform, d3.zoomIdentity.translate(width / 2 - d.x * scale, height / 2 - d.y * scale).scale(scale));
     }
 
 	// Dedicated function to open the modal
@@ -497,18 +488,23 @@ $(() => {
 
                 // 1. Collect ALL matches and flag if it's a spouse
                 function searchTree(node) {
-                    const nodeName = node.data.name ? node.data.name.toLowerCase() : '';
-                    const spouseName = node.data.spouse ? (node.data.spouse.name || node.data.spouse).toLowerCase() : '';
+					const nodeName = node.data.name ? node.data.name.toLowerCase() : '';
+					const spouseName = node.data.spouse ? (node.data.spouse.name || node.data.spouse).toLowerCase() : '';
 
-                    const matchMain = nodeName.includes(searchTerm);
-                    const matchSpouse = spouseName.includes(searchTerm);
+					// Extract alternate names if they exist in the YAML
+					const altNames = node.data.alt_names ? node.data.alt_names.map(n => n.toLowerCase()) : [];
+					const spouseAltNames = node.data.spouse && node.data.spouse.alt_names ? node.data.spouse.alt_names.map(n => n.toLowerCase()) : [];
 
-                    if (matchMain) searchResults.push({ node: node, isSpouseMatch: false });
-                    if (matchSpouse) searchResults.push({ node: node, isSpouseMatch: true });
+					// Check main names AND alternate spellings
+					const matchMain = nodeName.includes(searchTerm) || altNames.some(alt => alt.includes(searchTerm));
+					const matchSpouse = spouseName.includes(searchTerm) || spouseAltNames.some(alt => alt.includes(searchTerm));
 
-                    if (node.children) node.children.forEach(searchTree);
-                    if (node._children) node._children.forEach(searchTree);
-                }
+					if (matchMain) searchResults.push({ node: node, isSpouseMatch: false });
+					if (matchSpouse) searchResults.push({ node: node, isSpouseMatch: true });
+
+					if (node.children) node.children.forEach(searchTree);
+					if (node._children) node._children.forEach(searchTree);
+				}
                 
                 searchTree(root);
 
@@ -551,7 +547,7 @@ $(() => {
                 const scale = 1.5; 
                 rectBg.transition()
                     .duration(1000)
-                    .call(zoom.transform, d3.zoomIdentity.translate(width / 2 - targetNode.y * scale, height / 2 - targetNode.x * scale).scale(scale));
+                    .call(zoom.transform, d3.zoomIdentity.translate(width / 2 - targetNode.x * scale, height / 2 - targetNode.y * scale).scale(scale));
                 
                 // Reset all previous highlights
                 d3.selectAll('.box').style('fill', d => String(d.data.gender).toLowerCase() === 'female' ? '#ffd6ee' : '#d6ddff');

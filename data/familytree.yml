@@ -1,989 +1,1776 @@
----
 name: Ooran's Father
+id: oorans_father
+alt_names: []
 gender: male
-bio: 
+bio:
 image: images/placeholder.png
-spouse: Ooran's Mother
+spouse:
+  name: Ooran's Mother
+  id: oorans_mother
 children:
   - name: Ooran
-    gender: male
-    bio: 
-    image: images/placeholder.png
-    spouse: Ooran's Wife
-    children:
-      - name: Khadar
-        gender: male
-        image: images/placeholder.png
-        bio: Chitteth Family
-        spouse: Khadija
-        children:
-          - name: Abdu
-            gender: male
-            image: images/placeholder.png
-            bio: Chitteth Family
-            spouse: Pathumma
-            children:
-              - name: Kadher Pilla
-                gender: male
-                image: images/placeholder.png
-                bio: Chitteth Family
-                spouse: Khadeeja
-                children:
-                  - name: Abdul Kalam
-                    gender: male
-                    image: images/placeholder.png
-                    bio: Chitteth Family
-                    spouse: Shibi
-                    children:
-                      - name: Muhamed Yasin
-                        gender: male
-                      - name: Eshaan
-                        gender: male
-                  - name: Ajmal
-                    gender: male
-                    image: images/placeholder.png
-                    bio: Chitteth Family
-                    spouse: Shaima
-                    children:
-                      - name: Cemal
-                        gender: male
-                      - name: Fadhl
-                        gender: male
-                  - name: Rafeeque
-                    gender: male
-                    image: images/placeholder.png
-                    bio: Chitteth Family
-                    spouse: Ramla
-                    children:
-                      - name: Muhammed Rihan
-                        gender: male
-                      - name: Raihana
-                        gender: female
-                  - name: Afsal
-                    gender: male
-                    image: images/placeholder.png
-                    bio: Chitteth Family
-                    spouse: Jasna
-                    children:
-                      - name: Farhan
-                        gender: male
-                      - name: Suhana Mariyam
-                        gender: female
-              - name: Pareeth Pilla
-                gender: male
-                image: images/placeholder.png
-                bio: Chitteth Family
-                spouse: Suhara
-                children:
-                  - name: Shihab
-                    gender: male
-                    image: images/placeholder.png
-                    bio: Chitteth Family
-                    spouse: Risana
-                    children:
-                      - name: Raiha
-                        gender: female
-                      - name: Faiha
-                        gender: female
-                  - name: Siyad
-                    gender: male
-                    image: images/placeholder.png
-                    bio: Chitteth Family
-                    spouse: Anisha
-                    children:
-                      - name: Shifa
-                        gender: female
-                  - name: Shijila
-                    gender: female
-              - name: Kareem
-                gender: male
-                image: images/placeholder.png
-                bio: Chitteth Family
-                spouse: Suhara
-                children:
-                - name: Manaf
-                  gender: male
-                  image: images/placeholder.png
-                  bio: Chitteth Family
-                  spouse: Ansha
-                  children:
-                    - name: Hysham
-                      gender: male
-                    - name: Hasna
-                      gender: female
-                    - name: Hafees
-                      gender: male
-              - name: Khadiji
-                gender: female
-              - name: Mariyumma
-                gender: female
-              - name: Rabia
-                gender: female
-          - name: Ammu
-            gender: male
-            image: images/placeholder.png
-            bio: Chitteth Family
-            spouse: Nabeesa
-            children:
-              - name: Ahammed
-                gender: male
-                image: images/placeholder.png
-                bio: Chitteth Family
-                spouse: Beevi
-                children:
-                  - name: Jaseel
-                    gender: male
-                    image: images/placeholder.png
-                    bio: Chitteth Family
-                    spouse: Fathima
-                    children:
-                      - name: Adam
-                        gender: male
-                      - name: Adhel
-                        gender: male
-                  - name: Sahal
-                    gender: male
-                    image: images/placeholder.png
-                    bio: Chitteth Family
-                    spouse: Shamna
-                    children:
-                      - name: Zayan
-                        gender: male
-                      - name: Zahid
-                        gender: male
-              - name: Sulekha
-                gender: female
-              - name: Khadeeja
-                gender: female
-              - name: Aishi
-                gender: female
-          - name: Pathumma
-            gender: female
-          - name: Aishi
-            gender: female
-          - name: Hajara
-            gender: female
-          - name: Nabeesa
-            gender: female
-          - name: Avachi
-            gender: female
-      - name: Ibrahim
-        gender: male
-        image: images/placeholder.png
-        bio: Thaivelikkakam Family
-        spouse: Aishumma
-        children:
-          - name: Abdul Rahman
-            gender: male
-            image: images/placeholder.png
-            bio: Thaivelikkakam Family
-            spouse: Khadijamma/Kochupennu
-            children:
-              - name: Mammootty
-                gender: male
-                image: images/placeholder.png
-                bio: Thaivelikkakam Family
-                spouse: Mariyumma
-                children:
-                  - name: Abdul Rasheed
-                    gender: male
-                    image: images/placeholder.png
-                    bio: Thaivelikkakam Family
-                    spouse: Farhana
-                  - name: Sunayna
-                    gender: female
-                  - name: Sumaya
-                    gender: female
-                  - name: Sabeena
-                    gender: female
-              - name: Rasheed
-                gender: male
-          - name: Musthafa
-            gender: male
-            image: images/placeholder.png
-            bio: Thaivelikkakam Family
-            spouse: Kadheeja
-            children:
-              - name: Koch Aishi
-                gender: female
-          - name: Pareeth Pilla
-            gender: male
-            image: images/placeholder.png
-            bio: Thaivelikkakam Family
-            spouse: Sainaba
-            children:
-              - name: Muhammed Aly Jinna
-                gender: male
-                image: images/placeholder.png
-                bio: Thaivelikkakam Family
-                spouse: Rasiya
-                children:
-                  - name: Muhd Riyas
-                    gender: male
-                    image: images/placeholder.png
-                    bio: Thaivelikkakam Family
-                    spouse: Zakiya Parveen
-                    children:
-                      - name: Daleel Ahammed
-                        gender: male
-                      - name: Naira Mariyam
-                        gender: female
-                  - name: Raees
-                    gender: male
-              - name: Ibrahim Kutty
-                gender: male
-                image: images/placeholder.png
-                bio: Thaivelikkakam Family
-                spouse: Jameela
-                children:
-                  - name: Ijas
-                    gender: male
-                    image: images/placeholder.png
-                    bio: Thaivelikkakam Family
-                    spouse: Fathima
-                    children:
-                      - name: Iba Mehak
-                        gender: female
-                      - name: Isha Fathima
-                        gender: female
-                  - name: Shahin
-                    gender: male
-                  - name: Shabeer 
-                    gender: male
-              - name: Nazar
-                gender: male
-                image: images/placeholder.png
-                bio: Thaivelikkakam Family
-                spouse: Swapna
-                children:
-                  - name: Muhammed Fazal
-                    gender: male
-                  - name: Fansiya
-                    gender: female
-              - name: Salam
-                gender: male
-                image: images/placeholder.png
-                bio: Thaivelikkakam Family
-                spouse: Shafeeda
-                children:
-                  - name: Ajsal Muhammed
-                    gender: male
-                  - name: Ansia
-                    gender: female
-              - name: Ashraf
-                gender: male
-                image: images/placeholder.png
-                bio: Thaivelikkakam Family
-                spouse: Shabana
-                children:
-                  - name: Muzammil
-                    gender: male
-              - name: Suhara
-                gender: female
-              - name: Jameela
-                gender: female
-              - name: Khadeeja
-                gender: female
-              - name: Sajitha
-                gender: female
-              - name: Raseena
-                gender: female
-              - name: Shameena
-                gender: female
-
-          - name: Sarapulla
-            gender: female
-      - name: Ismail
-        gender: male
-        image: images/placeholder.png
-        bio: Chalukandam Family
-        spouse: Aishumma
-        children:
-          - name: Ibrahim Pilla
-            gender: male
-            image: images/placeholder.png
-            bio: Chalukandam Family
-            spouse: Aminamma
-            children:
-              - name: Subair
-                gender: male
-                image: images/placeholder.png
-                bio: Chalukandam Family
-                spouse: Abi
-          - name: Kadher Pilla
-            gender: male
-            image: images/placeholder.png
-            bio: Chalukandam Family
-            spouse: Sainaba (Blayi)
-            children:
-              - name: Abdulla
-                gender: male
-              - name: Ismail
-                gender: male
-                image: images/placeholder.png
-                bio: Chalukandam Family
-                spouse: Subaida
-                children:
-                  - name: Anfas
-                    gender: male
-                    image: images/placeholder.png
-                    bio: Chalukandam Family
-                    spouse: Sheeba
-                  - name: Afsal
-                    gender: male
-                    image: images/placeholder.png
-                    bio: Chalukandam Family
-                    spouse: Thasneem
-              - name: Muhammed
-                gender: male
-                image: images/placeholder.png
-                bio: Chalukandam Family
-                spouse: Vaheeda
-                children:
-                  - name: Masood
-                    gender: male
-                    image: images/placeholder.png
-                    bio: Chalukandam Family
-                    spouse: Thasneem
-                    children:
-                      - name: Ayra
-                        gender: female
-                  - name: Mumthas
-                    gender: female
-              - name: Aisha
-                gender: female
-              - name: Suhara
-                gender: female
-              - name: Jameela
-                gender: female
-          - name: Avaran
-            gender: male
-            image: images/placeholder.png
-            bio: Chalukandam Family
-            spouse: Ummani
-            children:
-              - name: Shamsu
-                gender: male
-                image: images/placeholder.png
-                bio: Chalukandam Family
-                spouse: Naseema
-                children:
-                  - name: Areej
-                    gender: male
-                  - name: Aimina
-                    gender: female
-              - name: Aboobacker
-                gender: male
-                image: images/placeholder.png
-                bio: Chalukandam Family
-                spouse: Rahna
-                children:
-                  - name: Anwar
-                    gender: male
-                  - name: Hanina
-                    gender: female
-                  - name: Saniha
-                    gender: female
-              - name: Rukiya
-                gender: female
-              - name: Naseera
-                gender: female
-          - name: Hawwamma
-            gender: female
-          - name: Khadijamma
-            gender: female
-          - name: Fathima
-            gender: female
-          - name: Ummani
-            gender: female
-      - name: Ahammed
-        gender: male
-        image: images/placeholder.png
-        bio: Moolayil Family
-        spouse: Biyokutty
-        children:
-          - name: Kadher Pilla
-            gender: male
-            image: images/placeholder.png
-            bio: Moolayil Family
-            spouse: Sherifa
-            children:
-              - name: Kunju Muhammed
-                gender: male
-                image: images/placeholder.png
-                bio: Moolayil Family
-                spouse: Nisa
-                children:
-                  - name: Shamnad
-                    gender: male
-                    image: images/placeholder.png
-                    bio: Moolayil Family
-                    spouse: Sajna
-                    children:
-                      - name: Muhammed Farseeh
-                        gender: male
-                      - name: Sana Fathima
-                        gender: female
-                  - name: Shahida
-                    gender: female
-              - name: Ibrahim Kutty
-                gender: male
-                image: images/placeholder.png
-                bio: Moolayil Family
-                spouse: Afeedha
-                children:
-                  - name: Shinas
-                    gender: male
-              - name: Suhara
-                gender: female
-          - name: Ibrahim
-            gender: male
-            image: images/placeholder.png
-            bio: Moolayil Family
-            spouse: Pathu
-            children:
-              - name: Salam
-                gender: male
-                image: images/placeholder.png
-                bio: Moolayil Family
-                spouse: Jameela
-                children:
-                  - name: Sahmi
-                    gender: female
-                  - name: Sahdi
-                    gender: female
-                  - name: Sana
-                    gender: female
-              - name: Nazar
-                gender: male
-                image: images/placeholder.png
-                bio: Moolayil Family
-                spouse: Saudamma
-                children:
-                  - name: Muhd Nizam
-                    gender: male
-                    image: images/placeholder.png
-                    bio: Moolayil Family
-                    spouse: Muhsina
-                  - name: Nabeel
-                    gender: male
-              - name: Basheer
-                gender: male
-                image: images/placeholder.png
-                bio: Moolayil Family
-                spouse: Nishamol
-                children:
-                  - name: Muhammed Anshad
-                    gender: male
-                  - name: Shibina
-                    gender: female 
-              - name: Fasila
-                gender: female
-          - name: Meethiyan Kunju
-            gender: male
-            image: images/placeholder.png
-            bio: Moolayil Family
-            spouse: Pathukutty
-            children:
-              - name: Kunjumon
-                gender: male
-                image: images/placeholder.png
-                bio: Moolayil Family
-                spouse: Ramla
-                children:
-                  - name: Muhiyudheen
-                    gender: male
-                  - name: Sinan
-                    gender: male
-                  - name: Fathima Thahseena
-                    gender: female
-              - name: Laila
-                gender: female
-              - name: Sainaba
-                gender: female
-          - name: Marackar
-            gender: male
-            image: images/placeholder.png
-            bio: Moolayil Family
-            spouse: Sherifa
-            children:
-              - name: Sabu
-                gender: male
-                image: images/placeholder.png
-                bio: Moolayil Family
-                spouse: Mafeena
-                children:
-                  - name: Silan
-                    gender: male
-                  - name: Sheza
-                    gender: female
-              - name: Shaima
-                gender: female
-          - name: Aishi
-            gender: female
-          - name: Pathu
-            gender: female
-      - name: Kunjipareed
-        gender: male
-        image: images/placeholder.png
-        bio: Padinjarayil Family
-        spouse: Aishu
-        children:
-          - name: Beeravu
-            gender: male
-            image: images/placeholder.png
-            bio: Padinjarayil Family
-            spouse: Mariyumma
-            children:
-              - name: Salam
-                gender: male
-                image: images/placeholder.png
-                bio: Padinjarayil Family
-                spouse: Rasiya
-                children:
-                  - name: Susmi
-                    gender: female
-                  - name: Sona
-                    gender: female
-              - name: Jaleel
-                gender: male
-                image: images/placeholder.png
-                bio: Padinjarayil Family
-                spouse: Shijila
-                children:
-                  - name: Muhammed Shabin
-                    gender: male
-                  - name: Shefrin
-                    gender: female
-                  - name: Eshaan
-                    gender: male
-              - name: Kabeer
-                gender: male
-                image: images/placeholder.png
-                bio: Padinjarayil Family
-                spouse: Raseela
-                children:
-                  - name: Rizwan Muhammed
-                    gender: male
-                  - name: Fathima Nasrin
-                    gender: female
-              - name: Haseena
-                gender: female
-          - name: Asya
-            gender: female
-          - name: Nabeesa
-            gender: female
-          - name: Aishapulla
-            gender: female
-          - name: Khadiji
-            gender: female
-          - name: Mariyumma
-            gender: female
-          - name: Avvamma
-            gender: female
-      - name: Manapulla
-        gender: male
-        image: images/placeholder.png
-        bio: Kizhakkethil Family
-        spouse: Pathumma
-        children:
-          - name: Kadher Pilla
-            gender: male
-            image: images/placeholder.png
-            bio: Kizhakkethil Family
-            spouse: Sherifa
-            children:
-              - name: Ibrahim Kutty
-                gender: male
-                image: images/placeholder.png
-                bio: Kizhakkethil Family
-                spouse: Rabia
-                children:
-                  - name: Ijaz
-                    gender: male
-                    image: images/placeholder.png
-                    bio: Kizhakkethil Family
-                    spouse: Farsa
-                  - name: Rameez
-                    gender: male
-                    image: images/placeholder.png
-                    bio: Kizhakkethil Family
-                    spouse: Kabia
-              - name: Nazar
-                gender: male
-                image: images/placeholder.png
-                bio: Kizhakkethil Family
-                spouse: Fathima
-                children:
-                  - name: Ajfar
-                    gender: male
-                    bio: Kizhakkethil Family
-                    image: images/placeholder.png
-                    spouse: Firoza
-                  - name: Anshif
-                    gender: male
-                    bio: Kizhakkethil Family
-                    image: images/placeholder.png
-                    spouse: Marwa
-              - name: Kunjathu
-                gender: female
-              - name: Sulu
-                gender: female
-              - name: Jameela
-                gender: female
-              - name: Beevi
-                gender: female
-          - name: Koyakutty
-            gender: male
-            image: images/placeholder.png
-            bio: Kizhakkethil Family
-            spouse: Aysha
-            children:
-              - name: Ibrahim Kutty
-                gender: male
-                image: images/placeholder.png
-                bio: Kizhakkethil Family
-                spouse: Laila
-                children:
-                  - name: Muhammed Rafeeque
-                    gender: male
-                    image: images/placeholder.png
-                    bio: Kizhakkethil Family
-                    spouse: Jinsha
-                    children:
-                      - name: Ayaan
-                        gender: male
-                  - name: Iqubal
-                    gender: male
-                    image: images/placeholder.png
-                    bio: Kizhakkethil Family
-                    spouse: Fabitha
-                    children:
-                      - name: Ihsaan
-                        gender: male
-                  - name: Rubeena
-                    gender: female
-              - name: Abdul Salam
-                gender: male
-                image: images/placeholder.png
-                bio: Kizhakkethil Family
-                spouse: Sheherban
-                children:
-                  - name: Shafeeq
-                    gender: male
-                    image: images/placeholder.png
-                    bio: Kizhakkethil Family
-                    spouse: Nadia
-                    children:
-                      - name: Mohd Faizan
-                        gender: male
-                  - name: Shereena
-                    gender: female
-                  - name: Shanitha
-                    gender: female
-              - name: Subaida
-                gender: female
-              - name: Ramlath
-                gender: female
-              - name: Zeenath
-                gender: female
-              - name: Naseema
-                gender: female
-              - name: Rasheeda
-                gender: female
-          - name: Muhammed
-            gender: male
-            image: images/placeholder.png
-            bio: Kizhakkethil Family
-            spouse: Kunjipathu
-            children:
-              - name: Hakkim
-                gender: male
-                image: images/placeholder.png
-                bio: Kizhakkethil Family
-                spouse: Sarja
-                children:
-                  - name: Adhil
-                    gender: male
-                  - name: Afrin Fathima
-                    gender: female
-              - name: Rasheeda
-                gender: female
-              - name: Sajida
-                gender: female
-              - name: Vaheeda
-                gender: female
-          - name: Sulaiman
-            gender: male
-            image: images/placeholder.png
-            bio: Kizhakkethil Family
-            spouse: Amina
-            children:
-              - name: Manaph
-                gender: male
-                image: images/placeholder.png
-                bio: Kizhakkethil Family
-                spouse: Smitha
-                children:
-                  - name: Fidha
-                    gender: female
-                  - name: Fadhil
-                    gender: male
-                  - name: Imthiyas Aalam
-                    gender: male
-              - name: Shyla
-                gender: female
-              - name: Nisha
-                gender: female
-          - name: Aishi
-            gender: female
-      - name: Hawwamma
-        gender: female
-  - name: Ooran's Brother 1
+    id: ooran
+    alt_names: []
     gender: male
     bio:
     image: images/placeholder.png
-    spouse: Ooran's Sister-in-law 1
+    spouse:
+      name: Ooran's Wife
+      id: oorans_wife
+    children:
+      - name: Khadar
+        id: khadar_chitteth
+        alt_names: ["Khader", "Kadhar", "Qadar"]
+        gender: male
+        image: images/placeholder.png
+        bio: Chitteth Family
+        spouse:
+          name: Khadija
+          id: khadija_khadar
+        children:
+          - name: Abdu
+            id: abdu_chitteth
+            alt_names: ["Abdul"]
+            gender: male
+            image: images/placeholder.png
+            bio: Chitteth Family
+            spouse:
+              name: Pathumma
+              id: pathumma_abdu
+            children:
+              - name: Kadher Pilla
+                id: kadher_pilla_chitteth
+                alt_names: ["Khader Pillai", "Kadhar Pilla"]
+                gender: male
+                image: images/placeholder.png
+                bio: Chitteth Family
+                spouse:
+                  name: Khadeeja
+                  id: khadeeja_kadher
+                children:
+                  - name: Abdul Kalam
+                    id: abdul_kalam
+                    alt_names: ["A P J Abdul Kalam"]
+                    gender: male
+                    image: images/placeholder.png
+                    bio: Chitteth Family
+                    spouse:
+                      name: Shibi
+                      id: shibi_kalam
+                    children:
+                      - name: Muhamed Yasin
+                        id: muhamed_yasin
+                        alt_names: ["Muhammed Yaseen", "Mohamed Yasin", "Muhammad
+                              Yasin"]
+                        gender: male
+                        image: images/placeholder.png
+                      - name: Eshaan
+                        id: eshaan
+                        alt_names: ["Ishaan", "Eshan", "Ishan"]
+                        gender: male
+                  - name: Ajmal
+                    id: ajmal_chitteth
+                    alt_names: ["Ajmaal"]
+                    gender: male
+                    image: images/placeholder.png
+                    bio: Chitteth Family
+                    spouse:
+                      name: Shaima
+                      id: shaima_ajmal
+                    children:
+                      - name: Cemal
+                        id: cemal
+                        alt_names: ["Jamal"]
+                        gender: male
+                      - name: Fadhl
+                        id: fadhl
+                        alt_names: ["Fazl", "Fadhel"]
+                        gender: male
+                  - name: Rafeeque
+                    id: rafeeque_chitteth
+                    alt_names: ["Rafeeq", "Rafiq", "Rafik"]
+                    gender: male
+                    image: images/placeholder.png
+                    bio: Chitteth Family
+                    spouse:
+                      name: Ramla
+                      id: ramla_rafeeque
+                    children:
+                      - name: Muhammed Rihan
+                        id: muhammed_rihan
+                        alt_names: ["Mohamed Rihan", "Muhammad Rehan", "Rehan"]
+                        gender: male
+                      - name: Raihana
+                        id: raihana
+                        alt_names: ["Rayhana", "Raihanath"]
+                        gender: female
+                  - name: Afsal
+                    id: afsal_chitteth
+                    alt_names: ["Afzal", "Afsil"]
+                    gender: male
+                    image: images/placeholder.png
+                    bio: Chitteth Family
+                    spouse:
+                      name: Jasna
+                      id: jasna_afsal
+                    children:
+                      - name: Farhan
+                        id: farhan
+                        alt_names: ["Farhaan"]
+                        gender: male
+                      - name: Suhana Mariyam
+                        id: suhana_mariyam
+                        alt_names: ["Suhana Mariam"]
+                        gender: female
+              - name: Pareeth Pilla
+                id: pareeth_pilla_chitteth
+                alt_names: ["Pareed Pilla", "Fareed Pillai"]
+                gender: male
+                image: images/placeholder.png
+                bio: Chitteth Family
+                spouse:
+                  name: Suhara
+                  id: suhara_pareeth
+                children:
+                  - name: Shihab
+                    id: shihab_chitteth
+                    alt_names: ["Shehab", "Shihabudeen"]
+                    gender: male
+                    image: images/placeholder.png
+                    bio: Chitteth Family
+                    spouse:
+                      name: Risana
+                      id: risana_shihab
+                    children:
+                      - name: Raiha
+                        id: raiha
+                        alt_names: ["Rayha"]
+                        gender: female
+                      - name: Faiha
+                        id: faiha
+                        alt_names: ["Fayha"]
+                        gender: female
+                  - name: Siyad
+                    id: siyad_chitteth
+                    alt_names: ["Ziyad", "Ziyaad"]
+                    gender: male
+                    image: images/placeholder.png
+                    bio: Chitteth Family
+                    spouse:
+                      name: Anisha
+                      id: anisha_siyad
+                    children:
+                      - name: Shifa
+                        id: shifa
+                        alt_names: ["Sheefa"]
+                        gender: female
+                  - name: Shijila
+                    id: shijila_chitteth
+                    alt_names: []
+                    gender: female
+              - name: Kareem
+                id: kareem_chitteth
+                alt_names: ["Karim", "Abdul Kareem"]
+                gender: male
+                image: images/placeholder.png
+                bio: Chitteth Family
+                spouse:
+                  name: Suhara
+                  id: suhara_kareem
+                children:
+                  - name: Manaf
+                    id: manaf_chitteth
+                    alt_names: ["Munaf"]
+                    gender: male
+                    image: images/placeholder.png
+                    bio: Chitteth Family
+                    spouse:
+                      name: Ansha
+                      id: ansha_manaf
+                    children:
+                      - name: Hysham
+                        id: hysham
+                        alt_names: ["Hisham"]
+                        gender: male
+                      - name: Hasna
+                        id: hasna
+                        alt_names: []
+                        gender: female
+                      - name: Hafees
+                        id: hafees
+                        alt_names: ["Hafeez", "Hafiz"]
+                        gender: male
+              - name: Khadiji
+                id: khadiji_chitteth
+                alt_names: ["Khadeeji"]
+                gender: female
+              - name: Mariyumma
+                id: mariyumma_chitteth
+                alt_names: ["Mariyama", "Mariam"]
+                gender: female
+              - name: Rabia
+                id: rabia_chitteth
+                alt_names: ["Rabiya"]
+                gender: female
+          - name: Ammu
+            id: ammu_chitteth
+            alt_names: []
+            gender: male
+            image: images/placeholder.png
+            bio: Chitteth Family
+            spouse:
+              name: Nabeesa
+              id: nabeesa_ammu
+            children:
+              - name: Ahammed
+                id: ahammed_chitteth
+                alt_names: ["Ahmed", "Ahamed", "Ahmad"]
+                gender: male
+                image: images/placeholder.png
+                bio: Chitteth Family
+                spouse:
+                  name: Beevi
+                  id: beevi_ahammed
+                children:
+                  - name: Jaseel
+                    id: jaseel_chitteth
+                    alt_names: ["Jazeel"]
+                    gender: male
+                    image: images/placeholder.png
+                    bio: Chitteth Family
+                    spouse:
+                      name: Fathima
+                      id: fathima_jaseel
+                    children:
+                      - name: Adam
+                        id: adam
+                        alt_names: ["Aadam"]
+                        gender: male
+                      - name: Adhel
+                        id: adhel
+                        alt_names: ["Adil", "Aadil"]
+                        gender: male
+                  - name: Sahal
+                    id: sahal_chitteth
+                    alt_names: ["Sahel"]
+                    gender: male
+                    image: images/placeholder.png
+                    bio: Chitteth Family
+                    spouse:
+                      name: Shamna
+                      id: shamna_sahal
+                    children:
+                      - name: Zayan
+                        id: zayan
+                        alt_names: ["Zayaan", "Zain"]
+                        gender: male
+                      - name: Zahid
+                        id: zahid
+                        alt_names: ["Zaahid"]
+                        gender: male
+              - name: Sulekha
+                id: sulekha_chitteth
+                alt_names: ["Zulekha"]
+                gender: female
+              - name: Khadeeja
+                id: khadeeja_chitteth
+                alt_names: ["Khadija", "Kadeeja"]
+                gender: female
+              - name: Aishi
+                id: aishi_chitteth_1
+                alt_names: ["Aisha", "Ayesha"]
+                gender: female
+          - name: Pathumma
+            id: pathumma_chitteth
+            alt_names: ["Fathima", "Fathimma"]
+            gender: female
+          - name: Aishi
+            id: aishi_chitteth_2
+            alt_names: ["Aisha", "Ayesha"]
+            gender: female
+          - name: Hajara
+            id: hajara_chitteth
+            alt_names: ["Hajar"]
+            gender: female
+          - name: Nabeesa
+            id: nabeesa_chitteth
+            alt_names: ["Nabeza"]
+            gender: female
+          - name: Avachi
+            id: avachi_chitteth
+            alt_names: []
+            gender: female
+      - name: Ibrahim
+        id: ibrahim_thaivelikkakam
+        alt_names: ["Ebrahim", "Ibraheem"]
+        gender: male
+        image: images/placeholder.png
+        bio: Thaivelikkakam Family
+        spouse:
+          name: Aishumma
+          id: aishumma_ibrahim
+        children:
+          - name: Abdul Rahman
+            id: abdul_rahman_thaivelikkakam
+            alt_names: ["Abdur Rahman", "Abdul Rahiman"]
+            gender: male
+            image: images/placeholder.png
+            bio: Thaivelikkakam Family
+            spouse:
+              name: Khadijamma/Kochupennu
+              id: khadijamma_abdul_rahman
+            children:
+              - name: Mammootty
+                id: mammootty_thaivelikkakam
+                alt_names: ["Mammutty", "Muhammad Kutty"]
+                gender: male
+                image: images/placeholder.png
+                bio: Thaivelikkakam Family
+                spouse:
+                  name: Mariyumma
+                  id: mariyumma_mammootty
+                children:
+                  - name: Abdul Rasheed
+                    id: abdul_rasheed_thaivelikkakam
+                    alt_names: ["Abdul Rashid"]
+                    gender: male
+                    image: images/placeholder.png
+                    bio: Thaivelikkakam Family
+                    spouse:
+                      name: Farhana
+                      id: farhana_rasheed
+                  - name: Sunayna
+                    id: sunayna
+                    alt_names: ["Sunaina"]
+                    gender: female
+                  - name: Sumaya
+                    id: sumaya
+                    alt_names: ["Sumayya", "Somaya"]
+                    gender: female
+                  - name: Sabeena
+                    id: sabeena
+                    alt_names: ["Sabina"]
+                    gender: female
+              - name: Rasheed
+                id: rasheed_thaivelikkakam
+                alt_names: ["Rashid"]
+                gender: male
+          - name: Musthafa
+            id: musthafa_thaivelikkakam
+            alt_names: ["Mustafa", "Moustafa"]
+            gender: male
+            image: images/placeholder.png
+            bio: Thaivelikkakam Family
+            spouse:
+              name: Kadheeja
+              id: kadheeja_musthafa
+            children:
+              - name: Koch Aishi
+                id: koch_aishi
+                alt_names: ["Koch Aisha"]
+                gender: female
+          - name: Pareeth Pilla
+            id: pareeth_pilla_thaivelikkakam
+            alt_names: ["Pareed Pilla"]
+            gender: male
+            image: images/placeholder.png
+            bio: Thaivelikkakam Family
+            spouse:
+              name: Sainaba
+              id: sainaba_pareeth
+            children:
+              - name: Muhammed Aly Jinna
+                id: muhammed_aly_jinna
+                alt_names: ["Mohamed Ali Jinnah", "Muhammad Ali Jinnah"]
+                gender: male
+                image: images/placeholder.png
+                bio: Thaivelikkakam Family
+                spouse:
+                  name: Rasiya
+                  id: rasiya_jinna
+                children:
+                  - name: Muhd Riyas
+                    id: muhd_riyas
+                    alt_names: ["Muhammed Riyas", "Mohamed Riaz"]
+                    gender: male
+                    image: images/placeholder.png
+                    bio: Thaivelikkakam Family
+                    spouse:
+                      name: Zakiya Parveen
+                      id: zakiya_riyas
+                    children:
+                      - name: Daleel Ahammed
+                        id: daleel_ahammed
+                        alt_names: ["Daleel Ahmed"]
+                        gender: male
+                      - name: Naira Mariyam
+                        id: naira_mariyam
+                        alt_names: ["Naira Mariam"]
+                        gender: female
+                  - name: Raees
+                    id: raees
+                    alt_names: ["Rais", "Rayees"]
+                    gender: male
+              - name: Ibrahim Kutty
+                id: ibrahim_kutty_thaivelikkakam
+                alt_names: ["Ebrahim Kutty"]
+                gender: male
+                image: images/placeholder.png
+                bio: Thaivelikkakam Family
+                spouse:
+                  name: Jameela
+                  id: jameela_ibrahim_kutty
+                children:
+                  - name: Ijas
+                    id: ijas_thaivelikkakam
+                    alt_names: ["Ijaz"]
+                    gender: male
+                    image: images/placeholder.png
+                    bio: Thaivelikkakam Family
+                    spouse:
+                      name: Fathima
+                      id: fathima_ijas
+                    children:
+                      - name: Iba Mehak
+                        id: iba_mehak
+                        alt_names: ["Iba Mehek"]
+                        gender: female
+                      - name: Isha Fathima
+                        id: isha_fathima
+                        alt_names: ["Isha Fatima"]
+                        gender: female
+                  - name: Shahin
+                    id: shahin
+                    alt_names: ["Shaheen"]
+                    gender: male
+                  - name: Shabeer
+                    id: shabeer
+                    alt_names: ["Shabir", "Shabeer"]
+                    gender: male
+              - name: Nazar
+                id: nazar_thaivelikkakam
+                alt_names: ["Nasar", "Nazer"]
+                gender: male
+                image: images/placeholder.png
+                bio: Thaivelikkakam Family
+                spouse:
+                  name: Swapna
+                  id: swapna_nazar
+                children:
+                  - name: Muhammed Fazal
+                    id: muhammed_fazal
+                    alt_names: ["Mohamed Fazil"]
+                    gender: male
+                  - name: Fansiya
+                    id: fansiya
+                    alt_names: []
+                    gender: female
+              - name: Salam
+                id: salam_thaivelikkakam
+                alt_names: ["Abdul Salam"]
+                gender: male
+                image: images/placeholder.png
+                bio: Thaivelikkakam Family
+                spouse:
+                  name: Shafeeda
+                  id: shafeeda_salam
+                children:
+                  - name: Ajsal Muhammed
+                    id: ajsal_muhammed
+                    alt_names: ["Ajsal Mohamed"]
+                    gender: male
+                  - name: Ansia
+                    id: ansia
+                    alt_names: ["Ansiya"]
+                    gender: female
+              - name: Ashraf
+                id: ashraf_thaivelikkakam
+                alt_names: ["Asraf"]
+                gender: male
+                image: images/placeholder.png
+                bio: Thaivelikkakam Family
+                spouse:
+                  name: Shabana
+                  id: shabana_ashraf
+                children:
+                  - name: Muzammil
+                    id: muzammil
+                    alt_names: ["Muzamil"]
+                    gender: male
+              - name: Suhara
+                id: suhara_thaivelikkakam
+                alt_names: ["Zuhara"]
+                gender: female
+              - name: Jameela
+                id: jameela_thaivelikkakam
+                alt_names: []
+                gender: female
+              - name: Khadeeja
+                id: khadeeja_thaivelikkakam
+                alt_names: ["Khadija"]
+                gender: female
+              - name: Sajitha
+                id: sajitha_thaivelikkakam
+                alt_names: ["Sajida"]
+                gender: female
+              - name: Raseena
+                id: raseena_thaivelikkakam
+                alt_names: ["Rasina"]
+                gender: female
+              - name: Shameena
+                id: shameena_thaivelikkakam
+                alt_names: ["Shamina"]
+                gender: female
+          - name: Sarapulla
+            id: sarapulla_thaivelikkakam
+            alt_names: []
+            gender: female
+      - name: Ismail
+        id: ismail_chalukandam
+        alt_names: ["Ishmail"]
+        gender: male
+        image: images/placeholder.png
+        bio: Chalukandam Family
+        spouse:
+          name: Aishumma
+          id: aishumma_ismail
+        children:
+          - name: Ibrahim Pilla
+            id: ibrahim_pilla_chalukandam
+            alt_names: ["Ebrahim Pilla"]
+            gender: male
+            image: images/placeholder.png
+            bio: Chalukandam Family
+            spouse:
+              name: Aminamma
+              id: aminamma_ibrahim
+            children:
+              - name: Subair
+                id: subair_chalukandam
+                alt_names: ["Zubair"]
+                gender: male
+                image: images/placeholder.png
+                bio: Chalukandam Family
+                spouse:
+                  name: Abi
+                  id: abi_subair
+          - name: Kadher Pilla
+            id: kadher_pilla_chalukandam
+            alt_names: ["Khader Pillai"]
+            gender: male
+            image: images/placeholder.png
+            bio: Chalukandam Family
+            spouse:
+              name: Sainaba (Blayi)
+              id: sainaba_kadher
+            children:
+              - name: Abdulla
+                id: abdulla_chalukandam
+                alt_names: ["Abdullah"]
+                gender: male
+              - name: Ismail
+                id: ismail_jr_chalukandam
+                alt_names: ["Ishmail"]
+                gender: male
+                image: images/placeholder.png
+                bio: Chalukandam Family
+                spouse:
+                  name: Subaida
+                  id: subaida_ismail
+                children:
+                  - name: Anfas
+                    id: anfas
+                    alt_names: []
+                    gender: male
+                    image: images/placeholder.png
+                    bio: Chalukandam Family
+                    spouse:
+                      name: Sheeba
+                      id: sheeba_anfas
+                  - name: Afsal
+                    id: afsal_chalukandam
+                    alt_names: ["Afzal"]
+                    gender: male
+                    image: images/placeholder.png
+                    bio: Chalukandam Family
+                    spouse:
+                      name: Thasneem
+                      id: thasneem_afsal
+              - name: Muhammed
+                id: muhammed_chalukandam
+                alt_names: ["Mohamed", "Muhammad"]
+                gender: male
+                image: images/placeholder.png
+                bio: Chalukandam Family
+                spouse:
+                  name: Vaheeda
+                  id: vaheeda_muhammed
+                children:
+                  - name: Masood
+                    id: masood
+                    alt_names: ["Masud"]
+                    gender: male
+                    image: images/placeholder.png
+                    bio: Chalukandam Family
+                    spouse:
+                      name: Thasneem
+                      id: thasneem_masood
+                    children:
+                      - name: Ayra
+                        id: ayra
+                        alt_names: ["Aira"]
+                        gender: female
+                  - name: Mumthas
+                    id: mumthas
+                    alt_names: ["Mumtaz"]
+                    gender: female
+              - name: Aisha
+                id: aisha_chalukandam
+                alt_names: ["Aysha"]
+                gender: female
+              - name: Suhara
+                id: suhara_chalukandam
+                alt_names: ["Zuhara"]
+                gender: female
+              - name: Jameela
+                id: jameela_chalukandam
+                alt_names: []
+                gender: female
+          - name: Avaran
+            id: avaran_chalukandam
+            alt_names: []
+            gender: male
+            image: images/placeholder.png
+            bio: Chalukandam Family
+            spouse:
+              name: Ummani
+              id: ummani_avaran
+            children:
+              - name: Shamsu
+                id: shamsu_chalukandam
+                alt_names: ["Shamsudeen"]
+                gender: male
+                image: images/placeholder.png
+                bio: Chalukandam Family
+                spouse:
+                  name: Naseema
+                  id: naseema_shamsu
+                children:
+                  - name: Areej
+                    id: areej
+                    alt_names: []
+                    gender: male
+                  - name: Aimina
+                    id: aimina
+                    alt_names: ["Amina"]
+                    gender: female
+              - name: Aboobacker
+                id: aboobacker_chalukandam
+                alt_names: ["Abubakar", "Abu Bakr"]
+                gender: male
+                image: images/placeholder.png
+                bio: Chalukandam Family
+                spouse:
+                  name: Rahna
+                  id: rahna_aboobacker
+                children:
+                  - name: Anwar
+                    id: anwar
+                    alt_names: ["Anwer"]
+                    gender: male
+                  - name: Hanina
+                    id: hanina
+                    alt_names: []
+                    gender: female
+                  - name: Saniha
+                    id: saniha
+                    alt_names: []
+                    gender: female
+              - name: Rukiya
+                id: rukiya_chalukandam
+                alt_names: ["Ruqayya", "Rukia"]
+                gender: female
+              - name: Naseera
+                id: naseera_chalukandam
+                alt_names: ["Nasira"]
+                gender: female
+          - name: Hawwamma
+            id: hawwamma_chalukandam
+            alt_names: ["Hawwa Umma"]
+            gender: female
+          - name: Khadijamma
+            id: khadijamma_chalukandam
+            alt_names: ["Khadeejamma"]
+            gender: female
+          - name: Fathima
+            id: fathima_chalukandam
+            alt_names: ["Fatima"]
+            gender: female
+          - name: Ummani
+            id: ummani_chalukandam
+            alt_names: []
+            gender: female
+      - name: Ahammed
+        id: ahammed_moolayil
+        alt_names: ["Ahmed", "Ahamed"]
+        gender: male
+        image: images/placeholder.png
+        bio: Moolayil Family
+        spouse:
+          name: Biyokutty
+          id: biyokutty_ahammed
+        children:
+          - name: Kadher Pilla
+            id: kadher_pilla_moolayil
+            alt_names: ["Khader Pillai"]
+            gender: male
+            image: images/placeholder.png
+            bio: Moolayil Family
+            spouse:
+              name: Sherifa
+              id: sherifa_kadher
+            children:
+              - name: Kunju Muhammed
+                id: kunju_muhammed_moolayil
+                alt_names: ["Kunju Mohamed"]
+                gender: male
+                image: images/placeholder.png
+                bio: Moolayil Family
+                spouse:
+                  name: Nisa
+                  id: nisa_kunju
+                children:
+                  - name: Shamnad
+                    id: shamnad
+                    alt_names: []
+                    gender: male
+                    image: images/placeholder.png
+                    bio: Moolayil Family
+                    spouse:
+                      name: Sajna
+                      id: sajna_shamnad
+                    children:
+                      - name: Muhammed Farseeh
+                        id: muhammed_farseeh
+                        alt_names: ["Mohamed Farsih"]
+                        gender: male
+                      - name: Sana Fathima
+                        id: sana_fathima_shamnad
+                        alt_names: ["Sana Fatima"]
+                        gender: female
+                  - name: Shahida
+                    id: shahida
+                    alt_names: ["Shaheeda"]
+                    gender: female
+              - name: Ibrahim Kutty
+                id: ibrahim_kutty_moolayil
+                alt_names: ["Ebrahim Kutty"]
+                gender: male
+                image: images/placeholder.png
+                bio: Moolayil Family
+                spouse:
+                  name: Afeedha
+                  id: afeedha_ibrahim
+                children:
+                  - name: Shinas
+                    id: shinas
+                    alt_names: ["Shinaz"]
+                    gender: male
+              - name: Suhara
+                id: suhara_moolayil
+                alt_names: ["Zuhara"]
+                gender: female
+          - name: Ibrahim
+            id: ibrahim_moolayil
+            alt_names: ["Ebrahim"]
+            gender: male
+            image: images/placeholder.png
+            bio: Moolayil Family
+            spouse:
+              name: Pathu
+              id: pathu_ibrahim
+            children:
+              - name: Salam
+                id: salam_moolayil
+                alt_names: ["Abdul Salam"]
+                gender: male
+                image: images/placeholder.png
+                bio: Moolayil Family
+                spouse:
+                  name: Jameela
+                  id: jameela_salam
+                children:
+                  - name: Sahmi
+                    id: sahmi
+                    alt_names: []
+                    gender: female
+                  - name: Sahdi
+                    id: sahdi
+                    alt_names: []
+                    gender: female
+                  - name: Sana
+                    id: sana
+                    alt_names: []
+                    gender: female
+              - name: Nazar
+                id: nazar_moolayil
+                alt_names: ["Nasar"]
+                gender: male
+                image: images/placeholder.png
+                bio: Moolayil Family
+                spouse:
+                  name: Saudamma
+                  id: saudamma_nazar
+                children:
+                  - name: Muhd Nizam
+                    id: muhd_nizam
+                    alt_names: ["Muhammed Nizam"]
+                    gender: male
+                    image: images/placeholder.png
+                    bio: Moolayil Family
+                    spouse:
+                      name: Muhsina
+                      id: muhsina_nizam
+                  - name: Nabeel
+                    id: nabeel
+                    alt_names: ["Nabil"]
+                    gender: male
+              - name: Basheer
+                id: basheer_moolayil
+                alt_names: ["Bashir"]
+                gender: male
+                image: images/placeholder.png
+                bio: Moolayil Family
+                spouse:
+                  name: Nishamol
+                  id: nishamol_basheer
+                children:
+                  - name: Muhammed Anshad
+                    id: muhammed_anshad
+                    alt_names: ["Mohamed Anshad"]
+                    gender: male
+                  - name: Shibina
+                    id: shibina
+                    alt_names: ["Shibeena"]
+                    gender: female
+              - name: Fasila
+                id: fasila
+                alt_names: ["Fazila"]
+                gender: female
+          - name: Meethiyan Kunju
+            id: meethiyan_kunju
+            alt_names: ["Methiyan Kunju"]
+            gender: male
+            image: images/placeholder.png
+            bio: Moolayil Family
+            spouse:
+              name: Pathukutty
+              id: pathukutty_meethiyan
+            children:
+              - name: Kunjumon
+                id: kunjumon_moolayil
+                alt_names: ["Kunju Mon"]
+                gender: male
+                image: images/placeholder.png
+                bio: Moolayil Family
+                spouse:
+                  name: Ramla
+                  id: ramla_kunjumon
+                children:
+                  - name: Muhiyudheen
+                    id: muhiyudheen
+                    alt_names: ["Muhiuddin", "Mohiuddin"]
+                    gender: male
+                  - name: Sinan
+                    id: sinan
+                    alt_names: []
+                    gender: male
+                  - name: Fathima Thahseena
+                    id: fathima_thahseena
+                    alt_names: ["Fatima Tahseena"]
+                    gender: female
+              - name: Laila
+                id: laila_moolayil
+                alt_names: ["Layla"]
+                gender: female
+              - name: Sainaba
+                id: sainaba_moolayil
+                alt_names: ["Zainaba"]
+                gender: female
+          - name: Marackar
+            id: marackar_moolayil
+            alt_names: ["Marakkar"]
+            gender: male
+            image: images/placeholder.png
+            bio: Moolayil Family
+            spouse:
+              name: Sherifa
+              id: sherifa_marackar
+            children:
+              - name: Sabu
+                id: sabu
+                alt_names: []
+                gender: male
+                image: images/placeholder.png
+                bio: Moolayil Family
+                spouse:
+                  name: Mafeena
+                  id: mafeena_sabu
+                children:
+                  - name: Silan
+                    id: silan
+                    alt_names: []
+                    gender: male
+                  - name: Sheza
+                    id: sheza
+                    alt_names: []
+                    gender: female
+              - name: Shaima
+                id: shaima_moolayil
+                alt_names: ["Shyma"]
+                gender: female
+          - name: Aishi
+            id: aishi_moolayil
+            alt_names: ["Aisha"]
+            gender: female
+          - name: Pathu
+            id: pathu_moolayil
+            alt_names: ["Fathima"]
+            gender: female
+      - name: Kunjipareed
+        id: kunjipareed_padinjarayil
+        alt_names: ["Kunji Pareeth"]
+        gender: male
+        image: images/placeholder.png
+        bio: Padinjarayil Family
+        spouse:
+          name: Aishu
+          id: aishu_kunjipareed
+        children:
+          - name: Beeravu
+            id: beeravu
+            alt_names: []
+            gender: male
+            image: images/placeholder.png
+            bio: Padinjarayil Family
+            spouse:
+              name: Mariyumma
+              id: mariyumma_beeravu
+            children:
+              - name: Salam
+                id: salam_padinjarayil
+                alt_names: ["Abdul Salam"]
+                gender: male
+                image: images/placeholder.png
+                bio: Padinjarayil Family
+                spouse:
+                  name: Rasiya
+                  id: rasiya_salam
+                children:
+                  - name: Susmi
+                    id: susmi
+                    alt_names: []
+                    gender: female
+                  - name: Sona
+                    id: sona
+                    alt_names: []
+                    gender: female
+              - name: Jaleel
+                id: jaleel_padinjarayil
+                alt_names: ["Jalil", "Abdul Jaleel"]
+                gender: male
+                image: images/placeholder.png
+                bio: Padinjarayil Family
+                spouse:
+                  name: Shijila
+                  id: shijila_jaleel
+                children:
+                  - name: Muhammed Shabin
+                    id: muhammed_shabin
+                    alt_names: ["Mohamed Shabin"]
+                    gender: male
+                  - name: Shefrin
+                    id: shefrin
+                    alt_names: []
+                    gender: female
+                  - name: Eshaan
+                    id: eshaan_padinjarayil
+                    alt_names: ["Ishaan", "Eshan"]
+                    gender: male
+              - name: Kabeer
+                id: kabeer_padinjarayil
+                alt_names: ["Kabir"]
+                gender: male
+                image: images/placeholder.png
+                bio: Padinjarayil Family
+                spouse:
+                  name: Raseela
+                  id: raseela_kabeer
+                children:
+                  - name: Rizwan Muhammed
+                    id: rizwan_muhammed
+                    alt_names: ["Rizwan Mohamed"]
+                    gender: male
+                  - name: Fathima Nasrin
+                    id: fathima_nasrin
+                    alt_names: ["Fatima Nazrin"]
+                    gender: female
+              - name: Haseena
+                id: haseena_padinjarayil
+                alt_names: ["Hasina"]
+                gender: female
+          - name: Asya
+            id: asya_padinjarayil
+            alt_names: ["Asiya"]
+            gender: female
+          - name: Nabeesa
+            id: nabeesa_padinjarayil
+            alt_names: []
+            gender: female
+          - name: Aishapulla
+            id: aishapulla_padinjarayil
+            alt_names: ["Aisha Pilla"]
+            gender: female
+          - name: Khadiji
+            id: khadiji_padinjarayil
+            alt_names: ["Khadeeja"]
+            gender: female
+          - name: Mariyumma
+            id: mariyumma_padinjarayil
+            alt_names: ["Mariam"]
+            gender: female
+          - name: Avvamma
+            id: avvamma_padinjarayil
+            alt_names: []
+            gender: female
+      - name: Manapulla
+        id: manapulla_kizhakkethil
+        alt_names: ["Manaf Pilla"]
+        gender: male
+        image: images/placeholder.png
+        bio: Kizhakkethil Family
+        spouse:
+          name: Pathumma
+          id: pathumma_manapulla
+        children:
+          - name: Kadher Pilla
+            id: kadher_pilla_kizhakkethil
+            alt_names: ["Khader Pilla"]
+            gender: male
+            image: images/placeholder.png
+            bio: Kizhakkethil Family
+            spouse:
+              name: Sherifa
+              id: sherifa_kadher_kiz
+            children:
+              - name: Ibrahim Kutty
+                id: ibrahim_kutty_kizhakkethil
+                alt_names: ["Ebrahim Kutty"]
+                gender: male
+                image: images/placeholder.png
+                bio: Kizhakkethil Family
+                spouse:
+                  name: Rabia
+                  id: rabia_ibrahim
+                children:
+                  - name: Ijaz
+                    id: ijaz_kizhakkethil
+                    alt_names: ["Ijas"]
+                    gender: male
+                    image: images/placeholder.png
+                    bio: Kizhakkethil Family
+                    spouse:
+                      name: Farsa
+                      id: farsa_ijaz
+                  - name: Rameez
+                    id: rameez
+                    alt_names: ["Ramiz"]
+                    gender: male
+                    image: images/placeholder.png
+                    bio: Kizhakkethil Family
+                    spouse:
+                      name: Kabia
+                      id: kabia_rameez
+              - name: Nazar
+                id: nazar_kizhakkethil
+                alt_names: ["Nasar"]
+                gender: male
+                image: images/placeholder.png
+                bio: Kizhakkethil Family
+                spouse:
+                  name: Fathima
+                  id: fathima_nazar
+                children:
+                  - name: Ajfar
+                    id: ajfar
+                    alt_names: []
+                    gender: male
+                    bio: Kizhakkethil Family
+                    image: images/placeholder.png
+                    spouse:
+                      name: Firoza
+                      id: firoza_ajfar
+                  - name: Anshif
+                    id: anshif
+                    alt_names: []
+                    gender: male
+                    bio: Kizhakkethil Family
+                    image: images/placeholder.png
+                    spouse:
+                      name: Marwa
+                      id: marwa_anshif
+              - name: Kunjathu
+                id: kunjathu
+                alt_names: []
+                gender: female
+              - name: Sulu
+                id: sulu
+                alt_names: []
+                gender: female
+              - name: Jameela
+                id: jameela_kizhakkethil
+                alt_names: []
+                gender: female
+              - name: Beevi
+                id: beevi_kizhakkethil
+                alt_names: ["Bivi"]
+                gender: female
+          - name: Koyakutty
+            id: koyakutty
+            alt_names: ["Koya Kutty"]
+            gender: male
+            image: images/placeholder.png
+            bio: Kizhakkethil Family
+            spouse:
+              name: Aysha
+              id: aysha_koyakutty
+            children:
+              - name: Ibrahim Kutty
+                id: ibrahim_kutty_koyakutty
+                alt_names: ["Ebrahim Kutty"]
+                gender: male
+                image: images/placeholder.png
+                bio: Kizhakkethil Family
+                spouse:
+                  name: Laila
+                  id: laila_ibrahim
+                children:
+                  - name: Muhammed Rafeeque
+                    id: muhammed_rafeeque_kiz
+                    alt_names: ["Mohamed Rafeeq"]
+                    gender: male
+                    image: images/placeholder.png
+                    bio: Kizhakkethil Family
+                    spouse:
+                      name: Jinsha
+                      id: jinsha_rafeeque
+                    children:
+                      - name: Ayaan
+                        id: ayaan
+                        alt_names: ["Ayan"]
+                        gender: male
+                  - name: Iqubal
+                    id: iqubal
+                    alt_names: ["Iqbal"]
+                    gender: male
+                    image: images/placeholder.png
+                    bio: Kizhakkethil Family
+                    spouse:
+                      name: Fabitha
+                      id: fabitha_iqubal
+                    children:
+                      - name: Ihsaan
+                        id: ihsaan
+                        alt_names: ["Ihsan", "Ehsan"]
+                        gender: male
+                  - name: Rubeena
+                    id: rubeena
+                    alt_names: ["Rubina"]
+                    gender: female
+              - name: Abdul Salam
+                id: abdul_salam_kizhakkethil
+                alt_names: ["Abdus Salam"]
+                gender: male
+                image: images/placeholder.png
+                bio: Kizhakkethil Family
+                spouse:
+                  name: Sheherban
+                  id: sheherban_salam
+                children:
+                  - name: Shafeeq
+                    id: shafeeq
+                    alt_names: ["Shafiq"]
+                    gender: male
+                    image: images/placeholder.png
+                    bio: Kizhakkethil Family
+                    spouse:
+                      name: Nadia
+                      id: nadia_shafeeq
+                    children:
+                      - name: Mohd Faizan
+                        id: mohd_faizan
+                        alt_names: ["Muhammed Faizan"]
+                        gender: male
+                  - name: Shereena
+                    id: shereena
+                    alt_names: ["Sherina"]
+                    gender: female
+                  - name: Shanitha
+                    id: shanitha
+                    alt_names: ["Shanida"]
+                    gender: female
+              - name: Subaida
+                id: subaida_kizhakkethil
+                alt_names: ["Zubaida"]
+                gender: female
+              - name: Ramlath
+                id: ramlath_kizhakkethil
+                alt_names: ["Ramla"]
+                gender: female
+              - name: Zeenath
+                id: zeenath_kizhakkethil
+                alt_names: ["Zinat"]
+                gender: female
+              - name: Naseema
+                id: naseema_kizhakkethil
+                alt_names: ["Nasima"]
+                gender: female
+              - name: Rasheeda
+                id: rasheeda_kizhakkethil
+                alt_names: ["Rashida"]
+                gender: female
+          - name: Muhammed
+            id: muhammed_kizhakkethil
+            alt_names: ["Mohamed", "Muhammad"]
+            gender: male
+            image: images/placeholder.png
+            bio: Kizhakkethil Family
+            spouse:
+              name: Kunjipathu
+              id: kunjipathu_muhammed
+            children:
+              - name: Hakkim
+                id: hakkim
+                alt_names: ["Hakim", "Hakeem"]
+                gender: male
+                image: images/placeholder.png
+                bio: Kizhakkethil Family
+                spouse:
+                  name: Sarja
+                  id: sarja_hakkim
+                children:
+                  - name: Adhil
+                    id: adhil
+                    alt_names: ["Adil"]
+                    gender: male
+                  - name: Afrin Fathima
+                    id: afrin_fathima
+                    alt_names: ["Afreen Fatima"]
+                    gender: female
+              - name: Rasheeda
+                id: rasheeda_muhammed
+                alt_names: ["Rashida"]
+                gender: female
+              - name: Sajida
+                id: sajida_muhammed
+                alt_names: ["Sajitha"]
+                gender: female
+              - name: Vaheeda
+                id: vaheeda_muhammed
+                alt_names: ["Waheeda"]
+                gender: female
+          - name: Sulaiman
+            id: sulaiman_kizhakkethil
+            alt_names: ["Sulayman", "Suleiman"]
+            gender: male
+            image: images/placeholder.png
+            bio: Kizhakkethil Family
+            spouse:
+              name: Amina
+              id: amina_sulaiman
+            children:
+              - name: Manaph
+                id: manaph
+                alt_names: ["Manaf"]
+                gender: male
+                image: images/placeholder.png
+                bio: Kizhakkethil Family
+                spouse:
+                  name: Smitha
+                  id: smitha_manaph
+                children:
+                  - name: Fidha
+                    id: fidha
+                    alt_names: ["Fida"]
+                    gender: female
+                  - name: Fadhil
+                    id: fadhil
+                    alt_names: ["Fazil", "Fadil"]
+                    gender: male
+                  - name: Imthiyas Aalam
+                    id: imthiyas_aalam
+                    alt_names: ["Imtiyaz Alam"]
+                    gender: male
+              - name: Shyla
+                id: shyla
+                alt_names: ["Shaila"]
+                gender: female
+              - name: Nisha
+                id: nisha
+                alt_names: []
+                gender: female
+          - name: Aishi
+            id: aishi_kizhakkethil
+            alt_names: ["Aisha"]
+            gender: female
+      - name: Hawwamma
+        id: hawwamma_kizhakkethil
+        alt_names: ["Hawwa Umma"]
+        gender: female
+  - name: Ooran's Brother 1
+    id: oorans_brother_1
+    alt_names: []
+    gender: male
+    bio:
+    image: images/placeholder.png
+    spouse:
+      name: Ooran's Sister-in-law 1
+      id: oorans_sister_in_law_1
     children:
       - name: Ahammed Pilla
+        id: ahammed_pilla
+        alt_names: ["Ahmed Pilla"]
         gender: male
         bio: Kizhakkevelikkakam Family
         image: images/placeholder.png
-        spouse: Hawwamma
+        spouse:
+          name: Hawwamma
+          id: hawwamma_ahammed
         children:
           - name: Abu
+            id: abu_ahammed
+            alt_names: []
             gender: male
             bio: Kizhakkevelikkakam Family
             image: images/placeholder.png
-            spouse: Khadeeja
+            spouse:
+              name: Khadeeja
+              id: khadeeja_abu
             children:
               - name: Maimulla
+                id: maimulla
+                alt_names: []
                 gender: male
               - name: Karim
+                id: karim_abu
+                alt_names: ["Kareem"]
                 gender: male
               - name: Maju
+                id: maju
+                alt_names: []
                 gender: male
               - name: Safiya
+                id: safiya_abu
+                alt_names: ["Safia"]
                 gender: female
               - name: Ramlath
+                id: ramlath_abu
+                alt_names: ["Ramla"]
                 gender: female
               - name: Salmath
+                id: salmath_abu
+                alt_names: ["Salma"]
                 gender: female
               - name: Jumailath
+                id: jumailath_abu
+                alt_names: ["Jumaila"]
                 gender: female
               - name: Zeenath
+                id: zeenath_abu
+                alt_names: ["Zinat"]
                 gender: female
           - name: Nabeesa
+            id: nabeesa_ahammed
+            alt_names: []
             gender: female
           - name: Pathu
+            id: pathu_ahammed
+            alt_names: ["Fathima"]
             gender: female
       - name: Kadher Pilla
+        id: kadher_pilla_chathanvelipadam
+        alt_names: ["Khader Pilla"]
         gender: male
         bio: Chathanvelipadam Family
         image: images/placeholder.png
-        spouse: Pathumma
+        spouse:
+          name: Pathumma
+          id: pathumma_kadher
         children:
           - name: Ismail Pilla
+            id: ismail_pilla_chathanvelipadam
+            alt_names: ["Ishmail Pilla"]
             gender: male
             bio: Chathanvelipadam Family
             image: images/placeholder.png
-            spouse: Nabeesa
+            spouse:
+              name: Nabeesa
+              id: nabeesa_ismail
             children:
               - name: Khader
+                id: khader_chathanvelipadam
+                alt_names: ["Khadar"]
                 gender: male
                 image: images/placeholder.png
                 bio: Chathanvelipadam Family
-                spouse: Fasila
+                spouse:
+                  name: Fasila
+                  id: fasila_khader
                 children:
                   - name: Aslam
+                    id: aslam
+                    alt_names: []
                     gender: male
               - name: Abdul Salam
+                id: abdul_salam_chathanvelipadam
+                alt_names: ["Abdus Salam"]
                 gender: male
                 image: images/placeholder.png
                 bio: Chathanvelipadam Family
-                spouse: Aneesa
+                spouse:
+                  name: Aneesa
+                  id: aneesa_salam
                 children:
                   - name: Ajul Mohd
+                    id: ajul_mohd
+                    alt_names: ["Ajul Muhammed"]
                     gender: male
                     image: images/placeholder.png
                     bio: Chathanvelipadam Family
-                    spouse: Muhsina Sherin
+                    spouse:
+                      name: Muhsina Sherin
+                      id: muhsina_sherin
                   - name: Arshad
+                    id: arshad
+                    alt_names: []
                     gender: male
                   - name: Ashitha
+                    id: ashitha
+                    alt_names: []
                     gender: female
               - name: Abu
+                id: abu_chathanvelipadam
+                alt_names: []
                 gender: male
                 image: images/placeholder.png
                 bio: Chathanvelipadam Family
-                spouse: Sulekha
+                spouse:
+                  name: Sulekha
+                  id: sulekha_abu
                 children:
                   - name: Althaf
+                    id: althaf
+                    alt_names: ["Altaf"]
                     gender: male
               - name: Nasar
+                id: nasar_chathanvelipadam
+                alt_names: ["Nazar"]
                 gender: male
                 image: images/placeholder.png
                 bio: Chathanvelipadam Family
-                spouse: Abida
+                spouse:
+                  name: Abida
+                  id: abida_nasar
                 children:
                   - name: Abinas
+                    id: abinas
+                    alt_names: ["Abinaz"]
                     gender: male
                   - name: Ancy
+                    id: ancy
+                    alt_names: []
                     gender: female
               - name: Nadeera
+                id: nadeera
+                alt_names: ["Nadira"]
                 gender: female
               - name: Ubairath
+                id: ubairath
+                alt_names: []
                 gender: female
           - name: Ibrahim Pilla
+            id: ibrahim_pilla_chathanvelipadam
+            alt_names: ["Ebrahim Pilla"]
             gender: male
             bio: Chathanvelipadam Family
             image: images/placeholder.png
-            spouse: Khadeeja
+            spouse:
+              name: Khadeeja
+              id: khadeeja_ibrahim
             children:
               - name: Nazar
+                id: nazar_chathanvelipadam
+                alt_names: ["Nasar"]
                 gender: male
                 image: images/placeholder.png
                 bio: Chathanvelipadam Family
-                spouse: Shemeena
+                spouse:
+                  name: Shemeena
+                  id: shemeena_nazar
                 children:
                   - name: Amiya Fathima
+                    id: amiya_fathima
+                    alt_names: ["Amiya Fatima"]
                     gender: female
               - name: Latheef
+                id: latheef_chathanvelipadam
+                alt_names: ["Abdul Latheef", "Latif"]
                 gender: male
                 image: images/placeholder.png
                 bio: Chathanvelipadam Family
-                spouse: Sulekha
+                spouse:
+                  name: Sulekha
+                  id: sulekha_latheef
                 children:
                   - name: Shafi
+                    id: shafi
+                    alt_names: ["Shafee"]
                     gender: male
               - name: Katharu
+                id: katharu
+                alt_names: ["Khadar"]
                 gender: male
                 image: images/placeholder.png
                 bio: Chathanvelipadam Family
-                spouse: Shameeda
+                spouse:
+                  name: Shameeda
+                  id: shameeda_katharu
                 children:
                   - name: Mushtaq
+                    id: mushtaq
+                    alt_names: ["Mushtak"]
                     gender: male
                   - name: Safiya
+                    id: safiya_katharu
+                    alt_names: ["Safia"]
                     gender: female
                   - name: Thanu Mehrin
+                    id: thanu_mehrin
+                    alt_names: ["Tanu Mehrin"]
                     gender: female
               - name: Jameela
+                id: jameela_ibrahim_pilla
+                alt_names: []
                 gender: female
               - name: Noorjahan
+                id: noorjahan
+                alt_names: ["Noor Jahan"]
                 gender: female
           - name: Abu
+            id: abu_haleema
+            alt_names: []
             gender: male
             bio: Chathanvelipadam Family
             image: images/placeholder.png
-            spouse: Haleema
+            spouse:
+              name: Haleema
+              id: haleema_abu
             children:
               - name: Kunju mon
+                id: kunju_mon_chathanvelipadam
+                alt_names: ["Kunjumon"]
                 gender: male
                 image: images/placeholder.png
                 bio: Chathanvelipadam Family
-                spouse: Thasneem
+                spouse:
+                  name: Thasneem
+                  id: thasneem_kunju_mon
                 children:
-                - name: Aman Mohd
-                  gender: male
-                - name: Sana Fathima
-                  gender: female
+                  - name: Aman Mohd
+                    id: aman_mohd
+                    alt_names: ["Aman Muhammed"]
+                    gender: male
+                  - name: Sana Fathima
+                    id: sana_fathima_kunju
+                    alt_names: ["Sana Fatima"]
+                    gender: female
               - name: Subaida
+                id: subaida_abu
+                alt_names: ["Zubaida"]
                 gender: female
               - name: Shamlath
+                id: shamlath_abu
+                alt_names: ["Shamla"]
                 gender: female
               - name: Rasheeda
+                id: rasheeda_abu
+                alt_names: ["Rashida"]
                 gender: female
               - name: Raseena
+                id: raseena_abu
+                alt_names: ["Rasina"]
                 gender: female
           - name: Muhammed
+            id: muhammed_chathanvelipadam
+            alt_names: ["Mohamed", "Muhammad"]
             gender: male
             bio: Chathanvelipadam Family
             image: images/placeholder.png
-            spouse: Jameela
+            spouse:
+              name: Jameela
+              id: jameela_muhammed
             children:
               - name: Jaleel
+                id: jaleel_chathanvelipadam
+                alt_names: ["Jalil", "Abdul Jaleel"]
                 gender: male
                 image: images/placeholder.png
                 bio: Chathanvelipadam Family
-                spouse: Vaheeda
+                spouse:
+                  name: Vaheeda
+                  id: vaheeda_jaleel
                 children:
                   - name: Mishal
+                    id: mishal
+                    alt_names: ["Mishael"]
                     gender: male
                   - name: Mehrin
+                    id: mehrin
+                    alt_names: ["Mehreen"]
                     gender: female
               - name: Muneer
+                id: muneer_chathanvelipadam
+                alt_names: ["Munir"]
                 gender: male
                 image: images/placeholder.png
                 bio: Chathanvelipadam Family
-                spouse: Juby
+                spouse:
+                  name: Juby
+                  id: juby_muneer
                 children:
                   - name: Ihsan
+                    id: ihsan
+                    alt_names: ["Ihsaan"]
                     gender: male
                   - name: Fawas
+                    id: fawas
+                    alt_names: ["Fawaz"]
                     gender: male
                   - name: Hanan
+                    id: hanan
+                    alt_names: []
                     gender: female
               - name: Shihab
+                id: shihab_chathanvelipadam
+                alt_names: ["Shehab"]
                 gender: male
                 image: images/placeholder.png
                 bio: Chathanvelipadam Family
-                spouse: Raseela
+                spouse:
+                  name: Raseela
+                  id: raseela_shihab
                 children:
                   - name: Nehar Fathima
+                    id: nehar_fathima
+                    alt_names: ["Nehar Fatima"]
                     gender: female
                   - name: Aisha Zahna
+                    id: aisha_zahna
+                    alt_names: []
                     gender: female
               - name: Noufiya
+                id: noufiya
+                alt_names: ["Noufiya"]
                 gender: female
           - name: Karim
+            id: karim_chathanvelipadam
+            alt_names: ["Kareem"]
             gender: male
             bio: Chathanvelipadam Family
             image: images/placeholder.png
-            spouse: Sainaba
+            spouse:
+              name: Sainaba
+              id: sainaba_karim
             children:
               - name: Muhammed Sageer
+                id: muhammed_sageer
+                alt_names: ["Mohamed Sagir"]
                 gender: male
                 image: images/placeholder.png
                 bio: Chathanvelipadam Family
-                spouse: Hafsath
+                spouse:
+                  name: Hafsath
+                  id: hafsath_sageer
                 children:
                   - name: Sumayya
+                    id: sumayya_sageer
+                    alt_names: ["Sumaya"]
                     gender: female
                   - name: Fathima
+                    id: fathima_sageer
+                    alt_names: ["Fatima"]
                     gender: female
                   - name: Mariyam
+                    id: mariyam_sageer
+                    alt_names: ["Mariam"]
                     gender: female
               - name: Saalih
+                id: saalih
+                alt_names: ["Salih", "Saleh"]
                 gender: male
                 image: images/placeholder.png
                 bio: Chathanvelipadam Family
-                spouse: Nisa
+                spouse:
+                  name: Nisa
+                  id: nisa_saalih
                 children:
                   - name: Hana Fathima
+                    id: hana_fathima
+                    alt_names: ["Hana Fatima"]
                     gender: female
                   - name: Isha Haleema
+                    id: isha_haleema
+                    alt_names: ["Isha Halima"]
                     gender: female
               - name: Sajeena
+                id: sajeena
+                alt_names: ["Sajina"]
                 gender: female
           - name: Kadheeja
+            id: kadheeja_kadher
+            alt_names: ["Khadija"]
             gender: female
           - name: Hajara
+            id: hajara_kadher
+            alt_names: ["Hajar"]
             gender: female
           - name: Hawa
+            id: hawa_kadher
+            alt_names: ["Hawwa"]
             gender: female
   - name: Ooran's Brother 2
+    id: oorans_brother_2
+    alt_names: []
     gender: male
     bio: Manath Family
     image: images/placeholder.png
-    spouse: Ooran's Sister-in-law 2
+    spouse:
+      name: Ooran's Sister-in-law 2
+      id: oorans_sister_in_law_2
     children:
       - name: To be traced
+        id: to_be_traced_2
+        alt_names: []
   - name: Ooran's Brother 3
+    id: oorans_brother_3
+    alt_names: []
     gender: male
     bio: Manath Family
     image: images/placeholder.png
-    spouse: Ooran's Sister-in-law 3
+    spouse:
+      name: Ooran's Sister-in-law 3
+      id: oorans_sister_in_law_3
     children:
       - name: To be traced
-  
+        id: to_be_traced_3
+        alt_names: []
